@@ -1,0 +1,116 @@
+[
+    {
+        "name": "Windows Azure",
+        "level": 6,
+        "years": 6,
+        "category": "CLOUD, NET"
+    },
+    {
+        "name": "Windows Comunication Foundation (WCF)",
+        "level": 7,
+        "years": 4,
+        "category": "NET"
+    },
+    {
+        "name": "Windows Presentation Foundation (WPF)",
+        "level": 7,
+        "years": 4,
+        "category": "NET"
+    },
+    {
+        "name": "Windows Entity Framework",
+        "level": 7,
+        "years": 4,
+        "category": "NET"
+    },
+    {
+        "name": "LINQ",
+        "level": 5,
+        "years": 4,
+        "category": "NET"
+    },
+    {
+        "name": "C#",
+        "level": 9,
+        "years": 6,
+        "category": "NET"
+    },
+    {
+        "name": "HTML5",
+        "level": 10,
+        "years": 10,
+        "category": "WEB"
+    },
+    {
+        "name": "HTML5",
+        "level": 10,
+        "years": 10,
+        "category": "WEB"
+    },
+    {
+        "name": "CSS3, SASS, SCSS",
+        "level": 10,
+        "years": 10,
+        "category": "WEB"
+    },
+    {
+        "name": "Java Script, ECMAScript 6",
+        "level": 10,
+        "years": 10,
+        "category": "WEB"
+    },
+    {
+        "name": "TypeScript",
+        "level": 10,
+        "years": 6,
+        "category": "WEB"
+    },
+    {
+        "name": "Angular 10+",
+        "level": 10,
+        "years": 6,
+        "category": "WEB"
+    },
+    {
+        "name": "ReactJS",
+        "level": 8,
+        "years": 1,
+        "category": "WEB"
+    },
+    {
+        "name": "VueJS",
+        "level": 6,
+        "years": 1,
+        "category": "WEB"
+    },
+    {
+        "name": "ElectronJS",
+        "level": 6,
+        "years": 2,
+        "category": "WEB"
+    },
+    {
+        "name": "SQL Server / SQL Azure",
+        "level": 7,
+        "years": 5,
+        "category": "DATABASE"
+    },
+    {
+        "name": "MongoDB",
+        "level": 7,
+        "years": 3,
+        "category": "DATABASE"
+    },
+    {
+        "name": "Google Firebase",
+        "level": 6,
+        "years": 1,
+        "category": "DATABASE"
+    },
+    {
+        "name": "Amazon Web Services",
+        "level": 6,
+        "years": 1,
+        "category": "CLOUD"
+    }
+]

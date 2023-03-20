@@ -1,0 +1,110 @@
+@import '../core/typography';
+
+body {
+    @extend .josefin;
+    background: url('../../asserts/img/lino-lila.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.header-hero {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    transition: height 0.3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  &.small {
+    height: 30vh;
+  }
+}
+
+
+.invitation {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    #bride {
+        position: absolute;
+        top: 16%;
+        right: -20%;
+        transition: all 0.5s ease;
+        display: none;
+        height: 80%;
+    }
+    #groom {
+        position: absolute;
+        top: 10%;
+        left: -10%;
+        transition: all 0.5s ease;
+        display: none;
+        height: 80%;
+    }
+    #title-inv {
+        width: 50%;
+        transition: all 0.5s ease;
+    }
+    #name-inv {
+        // display: none;
+        width: 300px;
+        transition: all 0.5s ease;
+    }
+}
+
+.header-hero {
+    &.small {
+        #title-inv {
+            // display: none;
+        }
+        #name-inv {
+            display: block;
+        }
+        #bride, #groom {
+            display: block;
+            height: 50%;
+        }
+    }
+
+    &.closeup {
+        #bride {
+            right: 10%;
+        }
+        #groom {
+            left: 10%;
+        }
+    }
+
+    &.kiss {
+        #bride {
+            right: 46%;
+        }
+        #groom {
+            left: 37%;
+        }
+    }
+}
+
+.tree-1, .tree-2 {
+    position: fixed;
+    opacity: 0.5;
+
+    max-width: 300px;
+}
+
+.tree-1 {
+    top: 0;
+    left: 0;
+}
+
+.tree-2 {
+    bottom: 0;
+    right: 0;
+}
+

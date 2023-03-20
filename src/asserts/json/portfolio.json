@@ -1,0 +1,37 @@
+{
+    "title": "Portfolio",
+    "description": "&lt;h3&gt;I have participated in different projects of multiple items, these are some of the most outstanding&lt;/h3&gt;",
+    "collection": [
+        {
+            "name": "Blackboard ULTRA",
+            "category": "Website Design &amp; Development",
+            "images": [],
+            "preview": null
+        },
+        {
+            "name": "Scholastic Pages",
+            "category": "Website Design &amp; Development",
+            "images": [],
+            "preview": null
+        },
+        {
+            "name": "Viva Anuncios",
+            "category": "Website Design &amp; Development",
+            "images": [],
+            "preview": null
+        },
+        {
+            "name": "Embassy of the united states, incident map",
+            "category": "Website Design &amp; Development",
+            "images": [],
+            "preview": null
+        },
+        
+        {
+            "name": "APX Glow",
+            "category": "Website Design &amp; Development",
+            "images": [],
+            "preview": null
+        }
+    ]
+}

@@ -1,0 +1,34 @@
+body { 
+    // background-image: url('../../asserts/img/background.png');
+    
+    .header-hero {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100vh;
+        transition: height 0.3s ease-in-out;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    section {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-size: 3rem;
+        &.first {
+            // padding-top: 100vh;
+        }
+      }
+
+      section:nth-child(even) {
+        // background-color: #ddd;
+      }
+      section:nth-child(odd) {
+        // background-color: #ccc;
+      }
+}
