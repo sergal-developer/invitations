@@ -15,5 +15,25 @@ body section {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  font-size: 3rem;
+  font-size: 2rem;
+  padding: 30px;
+}
+body section.toCenter {
+  text-align: center;
+}
+body footer {
+  margin-top: 100px;
+  background: #211E18;
+  padding: 60px 30px;
+  color: white;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+body footer h1 {
+  font-size: 4em;
+  line-height: 0.7;
+  margin: 0 !important;
 }

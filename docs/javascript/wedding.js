@@ -63,28 +63,41 @@ export class WeddingApp {
         //     this.toogleAnimation();
         // });
         const element = document.querySelector('#header-hero');
+        const title = document.querySelector('#title-inv');
         let scrollSpeed = 0.5;
+        let titleContent = '';
         window.addEventListener('scroll', () => {
             const scrollPosition = window.scrollY;
             const percentageScroll = this.percentageScrolled();
+            console.log('percentageScroll: ', percentageScroll);
             if (percentageScroll > 5) {
                 element.classList.add('small');
+                titleContent = 'Nos Casamos!!';
             }
             else {
                 element.classList.remove('small');
             }
-            if (percentageScroll > 30) {
+            if (percentageScroll > 11) {
                 element.classList.add('closeup');
             }
             else {
                 element.classList.remove('closeup');
             }
-            if (percentageScroll > 40) {
+            if (percentageScroll > 28) {
                 element.classList.add('kiss');
             }
             else {
                 element.classList.remove('kiss');
             }
+            if (percentageScroll > 30) {
+                titleContent = 'Estas Invitado';
+            }
+            else { }
+            if (percentageScroll > 69) {
+                titleContent = 'Te esperamos';
+            }
+            else { }
+            title.innerHTML = titleContent;
         });
     }
     percentageScrolled() {
