@@ -61,6 +61,10 @@ h1 {
   margin: 4rem 0;
 }
 
+p {
+  text-align: center;
+}
+
 .header-hero {
   position: fixed;
   top: 0;
