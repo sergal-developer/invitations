@@ -6,64 +6,14 @@ export class WeddingApp {
         //this.setupIntro();
         this.setupEvents();
     }
-    scrollHorizontally(e) {
-        e = window.event || e;
-        var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
-        var scrollSpeed = 60;
-        document.documentElement.scrollLeft -= (delta * scrollSpeed);
-        document.body.scrollLeft -= (delta * scrollSpeed);
-        e.preventDefault();
-    }
-    getLeftScroll(parent, position = 0) {
-        const _parent = document.querySelector(parent);
-        const width = _parent.clientWidth;
-        const widthChild = this.frames[0].clientWidth;
-        return width != widthChild ? widthChild * position : width * position;
-    }
-    gotoPage(page) {
-        if (this.inNavigation) {
-            return;
-        }
-        this.inNavigation = true;
-        const _parent = document.querySelector('.frame-container');
-        const left = this.getLeftScroll('.frame-container', page);
-        const container = document.querySelector('.frame-horizontal');
-        container.setAttribute('style', `margin-left: -${left}px`);
-        console.log('left: ', left);
-        // _parent.scroll({ left: left, behavior: 'smooth' });
-        container.classList.add('moveOn');
-        setTimeout(() => {
-            container.classList.remove('moveOn');
-            this.inNavigation = false;
-        }, 500);
-    }
-    setupIntro() {
-        const appFrame = document.querySelector('.app-frame');
-        appFrame.classList.add('intro');
-        setTimeout(() => {
-            appFrame.classList.remove('intro');
-        }, 1500);
-    }
-    toogleAnimation() {
-        const invitationEvt = document.querySelector('#invitation');
-        if (invitationEvt.classList.contains('animate')) {
-            invitationEvt.classList.remove('animate');
-        }
-        else {
-            invitationEvt.classList.add('animate');
-        }
-    }
     setupEvents() {
         this.paralaxInvitation();
     }
     paralaxInvitation() {
         window.scrollTo(0, 0);
-        // const invitationEvt = document.querySelector('#invitation');
-        // invitationEvt.addEventListener('click', (e) => {
-        //     this.toogleAnimation();
-        // });
         const element = document.querySelector('#header-hero');
         const title = document.querySelector('#title-inv');
+        const trees = document.querySelectorAll('.tree');
         let scrollSpeed = 0.5;
         let titleContent = '';
         window.addEventListener('scroll', () => {
@@ -77,13 +27,13 @@ export class WeddingApp {
             else {
                 element.classList.remove('small');
             }
-            if (percentageScroll > 11) {
+            if (percentageScroll > 6) {
                 element.classList.add('closeup');
             }
             else {
                 element.classList.remove('closeup');
             }
-            if (percentageScroll > 28) {
+            if (percentageScroll > 23) {
                 element.classList.add('kiss');
             }
             else {
@@ -97,7 +47,18 @@ export class WeddingApp {
                 titleContent = 'Te esperamos';
             }
             else { }
+            if (percentageScroll > 90) {
+                element.classList.add('hide');
+            }
+            else {
+                element.classList.remove('hide');
+            }
             title.innerHTML = titleContent;
+            // trees.forEach((layer: any) => {
+            //     var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            //     var skewAmount = scrollTop / 10; // Ajusta este valor para cambiar la cantidad de distorsión
+            //     layer.style.transform = "skewY(" + skewAmount + "deg)";
+            // });
         });
     }
     percentageScrolled() {
