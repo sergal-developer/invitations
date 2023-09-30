@@ -53,7 +53,7 @@ gulp.task('update-references-styles', () => {
 
 gulp.task('update-references-styles-all', () => {
   return gulp.src('./docs/**/*.html', {base: './'})
-    .pipe(replace(/href="\/(styles|_astro)\/[\S]*.css"/g, 'href="/main.css"'))
+    .pipe(replace(/href="\/(styles|_astro)\/[\S]*.css"/g, 'href="/invitations/main.css"'))
     .pipe(gulp.dest('./'));
 });
 

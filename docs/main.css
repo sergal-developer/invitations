@@ -376,8 +376,10 @@ img {
  * @param $value: contain | text | none
  *
  */
-* * {
-  outline: 1px solid rgba(238, 130, 238, 0.1);
+.accent {
+  font-size: inherit;
+  font-weight: 700;
+  color: #ee9510;
 }
 
 .app-page {
@@ -397,11 +399,12 @@ img {
   flex-wrap: nowrap;
   padding: 4% 10%;
 }
+.app-page.graduation .accent {
+  color: #EBCD55;
+}
 
-.accent {
-  font-size: inherit;
-  font-weight: 700;
-  color: #ee9510;
+.blur {
+  filter: blur(2px);
 }
 /**
  * @description
@@ -1129,8 +1132,10 @@ img {
  * @param $value: contain | text | none
  *
  */
-* * {
-  outline: 1px solid rgba(238, 130, 238, 0.1);
+.accent {
+  font-size: inherit;
+  font-weight: 700;
+  color: #ee9510;
 }
 
 .app-page {
@@ -1150,9 +1155,10 @@ img {
   flex-wrap: nowrap;
   padding: 4% 10%;
 }
+.app-page.graduation .accent {
+  color: #EBCD55;
+}
 
-.accent {
-  font-size: inherit;
-  font-weight: 700;
-  color: #ee9510;
+.blur {
+  filter: blur(2px);
 }
