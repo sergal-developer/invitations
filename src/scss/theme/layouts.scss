@@ -1,0 +1,31 @@
+@import "../core/globals.scss";
+@import "../core/mixins";
+
+* * {
+    outline: 1px solid rgba(238, 130, 238, 0.1);
+}
+
+.app-page {
+    width: 100vw;
+    min-height: 100vh;
+    font-family: $openSansFont;
+
+    &.graduation {
+        background: black;
+        color: white;
+        font-family: $oswaldFont;
+        font-size: 1rem;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        padding: 4% 10%;
+    }
+}
+
+.accent {
+    font-size: inherit;
+    font-weight: 700;
+    color: $accentColor;
+}

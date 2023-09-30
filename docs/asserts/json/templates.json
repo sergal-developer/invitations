@@ -1,8 +1,0 @@
-{
-    "skills": "<div class='col-6'><div class='col-6'><h4>{NAME}</h4>  <div class='level'><div class='bar' style='width: {LEVEL}%;'></div></div><p>{YEARS} years</p><div class='category'>{CATEGORY}</div></div></div>",
-    "experience": "<div class='experience-details'><div class='col-6'><div class='col-3 icon-block'><i class='fa-regular fa-paper-plane'></i></div><div class='flot-left'><h5>{NAME}</h5><h4>{TYPE}</h4><span>{PERIOD}</span></div></div><div class='col-6'><div>{DESCRIPTION}</div><div>{TECHS}</div></div></div><div class='full-divider'></div>",
-    "experience-tech": "<div class='tech'>[NAME]</div>",
-    "education": "<div class='education-details'><div class='col-6 margin-bottom50 margin-top50'><div class='col-3 icon-block'><i class='fa-solid fa-camera'></i></div><div class='flot-left'><h5>{NAME}</h5><h4>{CARRER}</h4><span>{YEARS}</span></div></div></div><div class='full-divider'></div>",
-    "portfolio": "<div class='portfolio-item'><div class='details'><h3>{NAME}</h3><span>{CATEGORY}</span><p>{PREVIEW}</p></div><div class='images'>{IMAGES}</div></div>",
-    "portfolio-image": "<div class='image'><img src='{URL}' alt='{TITLE}'></div>"
-}
