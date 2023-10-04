@@ -1,8 +1,18 @@
 ---
 import Main from "../../layouts/Main.astro";
+
+const playPause = (e) => {
+  alert('dfasdsadas');
+}
 ---
 
 <Main title="Invitations">
+
+  <div class="control-audio">
+    <img src="/invitations/img/volume.svg" alt="" />
+    <audio id="audio-background" src="/invitations/data/background-audio-1.mp3" autoplay loop></audio>
+  </div>
+  
   <div class="app-page graduation">
     <!-- <img class="ornament top" src="/invitations/img/ornament.svg" alt=""> -->
     <div class="body-content">
@@ -127,4 +137,29 @@ import Main from "../../layouts/Main.astro";
   window.onload = () => {
     app.init();
   };
+
+  const controlAudio = document.querySelector('.control-audio');
+
+  controlAudio.addEventListener("click", () => {
+    playPause();
+  });
+
+  function playPause() {
+    console.log('exec')
+    const audio = document.querySelector('#audio-background');
+    const icon = document.querySelector('.control-audio img');
+    const isMuted = audio.hasAttribute('muted');
+    console.log('isMuted: ', isMuted);
+    if( isMuted ) {
+      audio.removeAttribute('muted');
+      audio.setAttribute('src', '/invitations/data/background-audio-1.mp3');
+      icon.setAttribute('src', '/invitations/img/mute.svg');
+    } else {
+      
+
+      audio.setAttribute('muted', '');
+      audio.setAttribute('src', '');
+      icon.setAttribute('src', '/invitations/img/volume.svg');
+    }
+  }
 </script>

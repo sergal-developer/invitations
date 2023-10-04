@@ -10,6 +10,16 @@
     width: 100%;
 }
 
+.control-audio {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    right: 20px;
+    top: 20px;
+    z-index: 1;
+    cursor: pointer;
+}
+
 .ornament {
     position: absolute;
 

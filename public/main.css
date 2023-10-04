@@ -472,6 +472,15 @@ img {
   font-family: "Open Sans", sans-serif;
   width: 100%;
 }
+.app-page.graduation .control-audio {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  right: 20px;
+  top: 20px;
+  z-index: 1;
+  cursor: pointer;
+}
 .app-page.graduation .ornament {
   position: absolute;
 }
@@ -1239,6 +1248,16 @@ p {
   width: 100%;
 }
 
+.control-audio {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  right: 20px;
+  top: 20px;
+  z-index: 1;
+  cursor: pointer;
+}
+
 .ornament {
   position: absolute;
 }
@@ -1578,6 +1597,15 @@ img {
   flex-direction: column;
   font-family: "Open Sans", sans-serif;
   width: 100%;
+}
+.app-page.graduation .control-audio {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  right: 20px;
+  top: 20px;
+  z-index: 1;
+  cursor: pointer;
 }
 .app-page.graduation .ornament {
   position: absolute;
