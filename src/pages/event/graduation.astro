@@ -4,26 +4,47 @@ import Main from "../../layouts/Main.astro";
 
 <Main title="Invitations">
   <div class="app-page graduation">
-    <marquee behavior="" direction="">Sitio en construccion ...</marquee>
+    <!-- <img class="ornament top" src="/invitations/img/ornament.svg" alt=""> -->
+    <div class="body-content">
+      <h3 class="school wow bounceInUp">CDC San Agustín</h3>
 
-    <img src="/img/ornament.svg" alt="">
-    
-    <div class="blur">
-      <h3>CDC San Agustín</h3>
-
-      <div class="image-lamp">
-        <img src="/img/lamp.svg" alt="" />
+      <div class="image-lamp wow bounceInUp">
+        <img src="/invitations/img/lamp.svg" alt="" />
       </div>
 
-      <div>
-        <p class="accent">Juramento para enfermeras de Florence Nightingale</p>
+      <p>tiene el honor de invitarlo a la:</p>
 
-        <p>
+      <h2 class="title-ceremony accent wow bounceInUp">
+        Ceremonia de <br />
+        <span>Graduación</span>
+      </h2>
+      <div class="generation wow bounceInUp">Generación 2022 - 2023</div>
+
+      <div class="date wow bounceInUp">
+        <div class="name-day">
+          <span>Sábado</span>
+          <b>10:30 AM</b>
+        </div>
+
+        <div class="day">16</div>
+
+        <div class="month">
+          <span>Diciembre</span>
+          <b>2023</b>
+        </div>
+      </div>
+
+      <div class="poem ">
+        <h3 class="title accent wow bounceInUp">
+          Juramento para Enfermeras de Florence Nightingale
+        </h3>
+
+        <p class="wow bounceInUp">
           Juro solemnemente ante Dios y en presencia de esta asamblea llevar una
           vida digna y ejercer mi profesión honradamente.
         </p>
 
-        <p>
+        <p class="wow bounceInUp">
           Me abstendré de todo cuanto sea nocivo o dañino, y no tomaré ni
           suministraré cualquier substancia o producto que sea perjudicial para
           la salud.
@@ -42,77 +63,68 @@ import Main from "../../layouts/Main.astro";
         </p>
       </div>
 
-      <p>tiene el honor de invitarlo a la:</p>
-
-      <h2 class="accent">Ceremonia de <br /> Graduación</h2>
-      <span>Generación 2022 - 2023</span>
-
-      <p>en honor a:</p>
-
-      <ul class="accent">
-        <li>Ana Alicia Manguilar del Angel</li>
-        <li>Argelia Lorena Tavera Sanchez</li>
-        <li>Kasandra Rivera Cortes</li>
-        <li>Judith Citlali Ruiz Rocha</li>
-        <li>Karen Neyra Villegas</li>
-        <li>Teresa Zaragoza Luna</li>
-        <li>María del Rosario Calva de la Cruz</li>
-        <li>Maria Dolores Rocha Castillo</li>
-        <li>Angelica Joseph Morales Rosas</li>
-        <li>Pablo Alberto Fernández Miguel</li>
-        <li>Esly Renata Hernández Martínez</li>
-      </ul>
-
-      <div class="date">
-        <div>
-          <span>Sábado</span>
-          <b>10:30 AM</b>
-        </div>
-
-        <div>16</div>
-
-        <div>
-          <span>Diciembre</span>
-          <b>2023</b>
-        </div>
+      <div class="title">
+        <b>Honorables Graduados</b>
       </div>
 
-      <hr />
+      <div class="graduates">
+        <div>Ana Alicia <span> Manguilar del Angel</span> </div>
+        <div>Argelia Lorena <span> Tavera Sanchez</span> </div>
+        <div>Kasandra <span> Rivera Cortes</span> </div>
+        <div>Judith Citlali <span> Ruiz Rocha</span> </div>
+        <div>Karen <span> Neyra Villegas</span> </div>
+        <div>Teresa <span> Zaragoza Luna</span> </div>
+        <div>María del Rosario <span> Calva de la Cruz</span> </div>
+        <div>Maria Dolores <span> Rocha Castillo</span> </div>
+        <div>Angelica Joseph <span> Morales Rosas</span> </div>
+        <div>Pablo Alberto <span> Fernández Miguel</span> </div>
+        <div>Esly Renata <span> Hernández Martínez</span> </div>
+      </div>
 
-      <div>
+  
+      <div class="title">
+        <b>Comité Ejecutivo</b>
+      </div>
+
+      <div class="agent">
         Directora DIF Nezahualcóyotl
-        <h2 class="accent">Claudia Mónica Pérez Cerqueda</h2>
+        <div class="accent">Claudia Mónica Pérez Cerqueda</div>
       </div>
 
-      <div>
+      <div class="agent">
         Subdirector
-        <h2>Andrés Roberto Noguez Morales</h2>
+        <div class="accent">Andrés Roberto Noguez Morales</div>
       </div>
 
-      <div>
+      <div class="agent">
         Coordinador
-        <h2>Miguel Ángel Córdova Velázquez</h2>
+        <div class="accent">Miguel Ángel Córdova Velázquez</div>
       </div>
 
-      <div>
+      <div class="agent">
         Profesora
-        <h2>Monserrat Hernández García</h2>
+        <div class="accent">Monserrat Hernández García</div>
       </div>
+
+
+      <div class="congratulations">
+        <div class="birrete">
+          <img src="/invitations/img/birrete.svg" alt="" />
+        </div>
+
+        Felicidades a los Graduados!!
+      </div>
+
     </div>
   </div>
+
+  <!-- <img class="ornament bottom" src="/img/ornament.svg" alt=""> -->
 </Main>
 
 <script>
-  // import { APP } from "../data/index";
-  // const app = new APP();
-  // window.onload = (e) => {
-  //   app.init();
-  //   console.log("loaded!");
-  // };
   import { APP } from "../../data/main";
   const app = new APP();
   window.onload = () => {
     app.init();
-    console.log("loaded!");
   };
 </script>

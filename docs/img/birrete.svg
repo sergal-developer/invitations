@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" baseProfile="full" width="380.758" height="255.61" viewBox="0 0 380.76 255.61" enable-background="new 0 0 380.76 255.61" xml:space="preserve">
+	<g>
+		<linearGradient id="SVGID_Fill1_" gradientUnits="objectBoundingBox" x1="0.905612" y1="0.496735" x2="1.69138" y2="0.496735" gradientTransform="rotate(180.000000 0.905612 0.496735)">
+			<stop offset="0.00431034" stop-color="#1A1A1A" stop-opacity="1"/>
+			<stop offset="1" stop-color="#1A1A1A" stop-opacity="1"/>
+		</linearGradient>
+		<path fill="url(#SVGID_Fill1_)" stroke-width="0.32" stroke-linejoin="round" d="M 301.901,119.777L 301.901,201.853C 301.901,201.853 273.823,255.61 187.773,255.61C 101.724,255.61 84.0987,207.55 84.0987,207.55L 83.6187,119.777L 301.901,119.777 Z "/>
+		<path fill="#000000" fill-opacity="1" stroke-width="0.32" stroke-linejoin="round" d="M 190.095,5.85751L 0.101151,90.7227L 0,96.573L 190.577,187.768L 380.672,97.533L 380.668,91.6331L 190.095,5.85751 Z "/>
+		<linearGradient id="SVGID_Fill2_" gradientUnits="objectBoundingBox" x1="0.50846" y1="0.299653" x2="1.16644" y2="0.299653" gradientTransform="rotate(86.158562 0.508460 0.299653)">
+			<stop offset="0" stop-color="#606060" stop-opacity="1"/>
+			<stop offset="1" stop-color="#3C3C3C" stop-opacity="1"/>
+		</linearGradient>
+		<path fill="url(#SVGID_Fill2_)" stroke-width="0.32" stroke-linejoin="round" d="M 190.34,3.05176e-005L 0.0609283,90.7154L 190.822,181.911L 380.758,91.6431L 190.34,3.05176e-005 Z "/>
+		<path fill="#E3BD1A" fill-opacity="1" stroke-width="0.32" stroke-linejoin="round" d="M 190.858,86.1524L 350.751,104.669L 351.3,170.945C 354.712,172.322 357.12,175.666 357.12,179.572C 357.12,183.095 355.161,186.16 352.273,187.738L 365.901,222.342L 330.232,222.342L 343.777,187.95C 340.666,186.445 338.52,183.259 338.52,179.572C 338.52,175.432 341.224,171.924 344.963,170.719L 344.858,107.669L 190.458,90.9524L 190.858,86.1524 Z "/>
+	</g>
+</svg>

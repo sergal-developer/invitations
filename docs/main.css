@@ -412,6 +412,7 @@ img {
   background: black;
   color: white;
   font-family: "Oswald", sans-serif;
+  overflow-x: hidden;
   font-size: 1rem;
   display: flex;
   align-items: flex-start;
@@ -419,9 +420,164 @@ img {
   flex-direction: column;
   flex-wrap: nowrap;
   padding: 4% 10%;
+  position: relative;
+  line-height: 1.5;
+  /**
+   * @description
+   * Generate scroll into container 
+   *
+   * @param $size | define size of scroll
+   * 
+   * @param $foreground-color | define foreground color
+   * $foreground-color : rgba(255, 255, 255, 0.1);
+   * 
+   * @param $background-color | define background color
+   * background-color : rgba(255, 255, 255, 0.1);
+   *
+   * @param $radius | define trackbar with radius
+   */
+  /**
+   * @description
+   * Generate linear gradient
+   *
+   * @param $from-color | define initial color
+   * $from-color: rgba(255, 255, 255, 0.5);
+   * 
+   * @param $to-color | define end color
+   * $to-color: rgba(255, 255, 255, 0.1);
+   * 
+   * @param $deg | is defined by the center of the box containing the gradient image and by an angle
+   * $deg: 217deg | 0deg | top | top bottom | left | 0.25turn
+   */
+  /**
+   * @description
+   * Set element is selectable only text or none
+   *
+   * @param $value: contain | text | none
+   *
+   */
+  /**
+   * @description
+   * Convert Px into Em
+   *
+   * @param $value: contain | text | none
+   *
+   */
+}
+.app-page.graduation .body-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "Open Sans", sans-serif;
+}
+.app-page.graduation .ornament {
+  position: absolute;
+}
+.app-page.graduation .ornament.top {
+  top: 10px;
+  left: 10px;
 }
 .app-page.graduation .accent {
   color: #EBCD55;
+}
+.app-page.graduation .school {
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 30px;
+}
+.app-page.graduation .image-lamp {
+  width: 100%;
+  margin: 50px auto;
+}
+.app-page.graduation .title {
+  font-size: 1.5rem;
+  margin: 20px 0;
+}
+.app-page.graduation .title-ceremony {
+  font-size: 4rem;
+  line-height: 3.6rem;
+  font-family: "Great Vibes", cursive;
+  text-shadow: 0 0 10px #7f7756;
+}
+.app-page.graduation .title-ceremony span {
+  margin-left: 15%;
+}
+.app-page.graduation .generation {
+  padding: 15px 0;
+  border: 2px solid white;
+  font-size: 1.5rem;
+  width: 100%;
+  text-align: center;
+  border-left: none;
+  border-right: none;
+  margin: 70px 0 50px;
+  text-transform: uppercase;
+}
+.app-page.graduation .date {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  margin: 0 0 50px;
+}
+.app-page.graduation .date .name-day,
+.app-page.graduation .date .month {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  font-size: 1rem;
+}
+.app-page.graduation .date .day {
+  font-size: 3rem;
+  border: 1px solid white;
+  border-top: 0;
+  border-bottom: 0;
+  padding: 0 10px;
+}
+.app-page.graduation .graduates {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-bottom: 100px;
+}
+.app-page.graduation .graduates div {
+  font-family: "Niconne", cursive;
+  font-size: 2.3rem;
+  padding: 10px 15px;
+  color: #EBCD55;
+}
+.app-page.graduation .graduates div span {
+  display: block;
+  color: #dec255;
+}
+.app-page.graduation .agent {
+  font-size: 1.5rem;
+  width: 100%;
+  margin: 0 0 30px;
+}
+.app-page.graduation .agent div {
+  font-family: "Niconne", cursive;
+  font-size: 1.8rem;
+}
+.app-page.graduation .congratulations {
+  font-size: 3rem;
+  margin: 150px 0;
+  text-align: center;
+  font-family: "Great Vibes", cursive;
+}
+.app-page.graduation .congratulations .birrete {
+  width: 100%;
+}
+
+img {
+  width: inherit;
+  height: auto;
+}
+
+p {
+  margin-bottom: 30px;
 }
 /**
  * @description
@@ -1073,6 +1229,163 @@ p {
  * @param $value: contain | text | none
  *
  */
+.body-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "Open Sans", sans-serif;
+}
+
+.ornament {
+  position: absolute;
+}
+.ornament.top {
+  top: 10px;
+  left: 10px;
+}
+
+.accent {
+  color: #EBCD55;
+}
+
+.school {
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 30px;
+}
+
+.image-lamp {
+  width: 100%;
+  margin: 50px auto;
+}
+
+.title {
+  font-size: 1.5rem;
+  margin: 20px 0;
+}
+
+.title-ceremony {
+  font-size: 4rem;
+  line-height: 3.6rem;
+  font-family: "Great Vibes", cursive;
+  text-shadow: 0 0 10px #7f7756;
+}
+.title-ceremony span {
+  margin-left: 15%;
+}
+
+.generation {
+  padding: 15px 0;
+  border: 2px solid white;
+  font-size: 1.5rem;
+  width: 100%;
+  text-align: center;
+  border-left: none;
+  border-right: none;
+  margin: 70px 0 50px;
+  text-transform: uppercase;
+}
+
+.date {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  margin: 0 0 50px;
+}
+.date .name-day,
+.date .month {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  font-size: 1rem;
+}
+.date .day {
+  font-size: 3rem;
+  border: 1px solid white;
+  border-top: 0;
+  border-bottom: 0;
+  padding: 0 10px;
+}
+.graduates {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-bottom: 100px;
+}
+.graduates div {
+  font-family: "Niconne", cursive;
+  font-size: 2.3rem;
+  padding: 10px 15px;
+  color: #EBCD55;
+}
+.graduates div span {
+  display: block;
+  color: #dec255;
+}
+
+.agent {
+  font-size: 1.5rem;
+  width: 100%;
+  margin: 0 0 30px;
+}
+.agent div {
+  font-family: "Niconne", cursive;
+  font-size: 1.8rem;
+}
+
+.congratulations {
+  font-size: 3rem;
+  margin: 150px 0;
+  text-align: center;
+  font-family: "Great Vibes", cursive;
+}
+.congratulations .birrete {
+  width: 100%;
+}
+/**
+ * @description
+ * Generate scroll into container 
+ *
+ * @param $size | define size of scroll
+ * 
+ * @param $foreground-color | define foreground color
+ * $foreground-color : rgba(255, 255, 255, 0.1);
+ * 
+ * @param $background-color | define background color
+ * background-color : rgba(255, 255, 255, 0.1);
+ *
+ * @param $radius | define trackbar with radius
+ */
+/**
+ * @description
+ * Generate linear gradient
+ *
+ * @param $from-color | define initial color
+ * $from-color: rgba(255, 255, 255, 0.5);
+ * 
+ * @param $to-color | define end color
+ * $to-color: rgba(255, 255, 255, 0.1);
+ * 
+ * @param $deg | is defined by the center of the box containing the gradient image and by an angle
+ * $deg: 217deg | 0deg | top | top bottom | left | 0.25turn
+ */
+/**
+ * @description
+ * Set element is selectable only text or none
+ *
+ * @param $value: contain | text | none
+ *
+ */
+/**
+ * @description
+ * Convert Px into Em
+ *
+ * @param $value: contain | text | none
+ *
+ */
 h1 {
   font-size: 2.1875em;
   line-height: 2.3125em;
@@ -1204,6 +1517,7 @@ img {
   background: black;
   color: white;
   font-family: "Oswald", sans-serif;
+  overflow-x: hidden;
   font-size: 1rem;
   display: flex;
   align-items: flex-start;
@@ -1211,7 +1525,162 @@ img {
   flex-direction: column;
   flex-wrap: nowrap;
   padding: 4% 10%;
+  position: relative;
+  line-height: 1.5;
+  /**
+   * @description
+   * Generate scroll into container 
+   *
+   * @param $size | define size of scroll
+   * 
+   * @param $foreground-color | define foreground color
+   * $foreground-color : rgba(255, 255, 255, 0.1);
+   * 
+   * @param $background-color | define background color
+   * background-color : rgba(255, 255, 255, 0.1);
+   *
+   * @param $radius | define trackbar with radius
+   */
+  /**
+   * @description
+   * Generate linear gradient
+   *
+   * @param $from-color | define initial color
+   * $from-color: rgba(255, 255, 255, 0.5);
+   * 
+   * @param $to-color | define end color
+   * $to-color: rgba(255, 255, 255, 0.1);
+   * 
+   * @param $deg | is defined by the center of the box containing the gradient image and by an angle
+   * $deg: 217deg | 0deg | top | top bottom | left | 0.25turn
+   */
+  /**
+   * @description
+   * Set element is selectable only text or none
+   *
+   * @param $value: contain | text | none
+   *
+   */
+  /**
+   * @description
+   * Convert Px into Em
+   *
+   * @param $value: contain | text | none
+   *
+   */
+}
+.app-page.graduation .body-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "Open Sans", sans-serif;
+}
+.app-page.graduation .ornament {
+  position: absolute;
+}
+.app-page.graduation .ornament.top {
+  top: 10px;
+  left: 10px;
 }
 .app-page.graduation .accent {
   color: #EBCD55;
+}
+.app-page.graduation .school {
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 30px;
+}
+.app-page.graduation .image-lamp {
+  width: 100%;
+  margin: 50px auto;
+}
+.app-page.graduation .title {
+  font-size: 1.5rem;
+  margin: 20px 0;
+}
+.app-page.graduation .title-ceremony {
+  font-size: 4rem;
+  line-height: 3.6rem;
+  font-family: "Great Vibes", cursive;
+  text-shadow: 0 0 10px #7f7756;
+}
+.app-page.graduation .title-ceremony span {
+  margin-left: 15%;
+}
+.app-page.graduation .generation {
+  padding: 15px 0;
+  border: 2px solid white;
+  font-size: 1.5rem;
+  width: 100%;
+  text-align: center;
+  border-left: none;
+  border-right: none;
+  margin: 70px 0 50px;
+  text-transform: uppercase;
+}
+.app-page.graduation .date {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  margin: 0 0 50px;
+}
+.app-page.graduation .date .name-day,
+.app-page.graduation .date .month {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  font-size: 1rem;
+}
+.app-page.graduation .date .day {
+  font-size: 3rem;
+  border: 1px solid white;
+  border-top: 0;
+  border-bottom: 0;
+  padding: 0 10px;
+}
+.app-page.graduation .graduates {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-bottom: 100px;
+}
+.app-page.graduation .graduates div {
+  font-family: "Niconne", cursive;
+  font-size: 2.3rem;
+  padding: 10px 15px;
+  color: #EBCD55;
+}
+.app-page.graduation .graduates div span {
+  display: block;
+  color: #dec255;
+}
+.app-page.graduation .agent {
+  font-size: 1.5rem;
+  width: 100%;
+  margin: 0 0 30px;
+}
+.app-page.graduation .agent div {
+  font-family: "Niconne", cursive;
+  font-size: 1.8rem;
+}
+.app-page.graduation .congratulations {
+  font-size: 3rem;
+  margin: 150px 0;
+  text-align: center;
+  font-family: "Great Vibes", cursive;
+}
+.app-page.graduation .congratulations .birrete {
+  width: 100%;
+}
+
+img {
+  width: inherit;
+  height: auto;
+}
+
+p {
+  margin-bottom: 30px;
 }

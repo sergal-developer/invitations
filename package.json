@@ -34,7 +34,9 @@
     "gulp-open": "^3.0.1",
     "nodemon": "^2.0.19",
     "path": "^0.12.7",
-    "scss": "^0.2.4"
+    "scss": "^0.2.4",
+    "tsparticles-engine": "^2.12.0",
+    "wow.js": "^1.2.2"
   },
   "devDependencies": {
     "gulp": "^4.0.2",
