@@ -470,6 +470,7 @@ img {
   justify-content: center;
   flex-direction: column;
   font-family: "Open Sans", sans-serif;
+  width: 100%;
 }
 .app-page.graduation .ornament {
   position: absolute;
@@ -1235,6 +1236,7 @@ p {
   justify-content: center;
   flex-direction: column;
   font-family: "Open Sans", sans-serif;
+  width: 100%;
 }
 
 .ornament {
@@ -1575,6 +1577,7 @@ img {
   justify-content: center;
   flex-direction: column;
   font-family: "Open Sans", sans-serif;
+  width: 100%;
 }
 .app-page.graduation .ornament {
   position: absolute;
