@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&family=Roboto:ital,wght@0,300;0,400;0,700;1,400&family=Ubuntu&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css");
@@ -562,6 +563,7 @@ img {
   text-align: center;
   width: 100%;
   transition: all 300ms;
+  position: relative;
 }
 .app-page.graduation .graduates div span {
   display: block;
@@ -570,6 +572,11 @@ img {
 .app-page.graduation .graduates div:hover {
   text-shadow: 0 0 20px #EBCD55, 0 0 20px #EBCD55, 0 0 20px #EBCD55;
   cursor: pointer;
+}
+.app-page.graduation .graduates div:after {
+  content: "•";
+  font-size: 2rem;
+  line-height: 50px;
 }
 .app-page.graduation .agent {
   font-size: 1.5rem;
@@ -608,7 +615,6 @@ img {
   transform-origin: center;
   transform: rotateY(calc(var(--i) * 360deg / var(--numGraduates))) translateZ(400px);
   color: #EBCD55;
-  font-family: "Niconne", cursive;
   font-size: 1.5rem;
   padding: 10px 15px;
   transition: all 300ms;
@@ -620,6 +626,7 @@ img {
 }
 .app-page.graduation .box .item .names {
   font-size: 1rem;
+  text-align: center;
 }
 
 img {
@@ -1239,6 +1246,7 @@ p {
   margin: 1em 0;
 }
 
+@charset "UTF-8";
 /**
  * @description
  * Generate scroll into container 
@@ -1388,6 +1396,7 @@ p {
   text-align: center;
   width: 100%;
   transition: all 300ms;
+  position: relative;
 }
 .graduates div span {
   display: block;
@@ -1396,6 +1405,11 @@ p {
 .graduates div:hover {
   text-shadow: 0 0 20px #EBCD55, 0 0 20px #EBCD55, 0 0 20px #EBCD55;
   cursor: pointer;
+}
+.graduates div:after {
+  content: "•";
+  font-size: 2rem;
+  line-height: 50px;
 }
 
 .agent {
@@ -1437,7 +1451,6 @@ p {
   transform-origin: center;
   transform: rotateY(calc(var(--i) * 360deg / var(--numGraduates))) translateZ(400px);
   color: #EBCD55;
-  font-family: "Niconne", cursive;
   font-size: 1.5rem;
   padding: 10px 15px;
   transition: all 300ms;
@@ -1449,6 +1462,7 @@ p {
 }
 .box .item .names {
   font-size: 1rem;
+  text-align: center;
 }
 /**
  * @description
@@ -1566,6 +1580,7 @@ img {
   font-size: inherit;
   font-family: inherit;
 }
+@charset "UTF-8";
 /**
  * @description
  * Generate scroll into container 
@@ -1772,6 +1787,7 @@ img {
   text-align: center;
   width: 100%;
   transition: all 300ms;
+  position: relative;
 }
 .app-page.graduation .graduates div span {
   display: block;
@@ -1780,6 +1796,11 @@ img {
 .app-page.graduation .graduates div:hover {
   text-shadow: 0 0 20px #EBCD55, 0 0 20px #EBCD55, 0 0 20px #EBCD55;
   cursor: pointer;
+}
+.app-page.graduation .graduates div:after {
+  content: "•";
+  font-size: 2rem;
+  line-height: 50px;
 }
 .app-page.graduation .agent {
   font-size: 1.5rem;
@@ -1818,7 +1839,6 @@ img {
   transform-origin: center;
   transform: rotateY(calc(var(--i) * 360deg / var(--numGraduates))) translateZ(400px);
   color: #EBCD55;
-  font-family: "Niconne", cursive;
   font-size: 1.5rem;
   padding: 10px 15px;
   transition: all 300ms;
@@ -1830,6 +1850,7 @@ img {
 }
 .app-page.graduation .box .item .names {
   font-size: 1rem;
+  text-align: center;
 }
 
 img {
