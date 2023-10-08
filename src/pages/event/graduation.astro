@@ -4,11 +4,11 @@ import Main from "../../layouts/Main.astro";
 
 <Main title="Invitations">
 
-  <div class="control-audio"></div>
-  <!-- <div class="control-audio">
+  <!-- <div class="control-audio"></div> -->
+  <div class="control-audio">
     <img src="/invitations/img/volume.svg" alt="" />
     <audio id="audio-background" src="/invitations/data/background-audio-1.mp3" autoplay loop></audio>
-  </div> -->
+  </div>
   
   <div class="app-page graduation">
     <!-- <img class="ornament top" src="/invitations/img/ornament.svg" alt=""> -->
@@ -169,9 +169,10 @@ import Main from "../../layouts/Main.astro";
 </Main>
 
 <script>
+  /* 
   import { APP } from "../../data/main";
   const app = new APP();
-  
+  */
   const box: any = document.querySelector('.box');
   const boxItems = document.querySelectorAll('.box .item');
 
@@ -179,11 +180,6 @@ import Main from "../../layouts/Main.astro";
     .setProperty('--numGraduates', `${ boxItems.length }`);
   const list = getComputedStyle(document.documentElement)
     .getPropertyValue('--numGraduates');
-  console.log('list: ', list);
-
-  window.onload = () => {
-    app.init();
-  };
 
   let step = 0;
   let steps = 360 / boxItems.length;
