@@ -51,7 +51,7 @@ gulp.task('update-references-styles', () => {
     .pipe(gulp.dest('./'));
 });
 
-gulp.task('update-references-styles-all', () => {
+gulp.task('update-references-css', () => {
   return gulp.src('./docs/**/*.html', {base: './'})
     .pipe(replace(/href="\/invitations\/(styles|_astro)\/[\S]*.css"/g, 'href="/invitations/main.css"'))
     .pipe(gulp.dest('./'));
@@ -67,7 +67,7 @@ gulp.task('rename-folders', (done) => {
 });
 
 gulp.task('prepare-deploy', 
-  gulp.series('rename-folders', 'update-references-styles-all'));
+  gulp.series('rename-folders', 'update-references-css', 'update-references-styles'));
 
 gulp.task('build', 
   gulp.series('styles', 'scripts'));
