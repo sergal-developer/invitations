@@ -160,7 +160,7 @@ section {
         align-items: center;
         justify-content: center;
         padding: 20px;
-        font-family: $josefinSans;
+        // font-family: $josefinSans;
         transition: all 300ms;
 
         .avatar {
@@ -341,9 +341,12 @@ section {
         width: 100%;
         margin: 0 0 30px;
 
-        div {
-            font-family: $niconne;
+        .name {
+            // font-family: $niconne;
+            color: #EBCD55;
             font-size: 1.8rem;
+            font-weight: lighter;
+            span { font-weight: bold;}
         }
     }
 
