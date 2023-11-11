@@ -30,6 +30,10 @@
     font-family: $josefinSans;
 }
 
+section {
+    margin: 50px 0;
+}
+
 .playerButton {
     padding: 10px;
     
@@ -187,12 +191,12 @@
 
 .box {
     position: relative;
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     transform-style: preserve-3d;
     transform: perspective(1000px) rotateY(0deg);
     transition: all 300ms;
-    margin-bottom: 250px;
+    margin: 100px;
 
     .item {
         position: absolute;
@@ -220,6 +224,10 @@
         .names {
             font-size: 1rem;
             text-align: center;
+        }
+
+        img {
+            width: 100%
         }
     }
 }
@@ -260,7 +268,7 @@
             transition: all 300ms;
 
             &.full {
-                width: 100%;
+                width: inherit;
                 height: auto;
             }
         }
@@ -279,7 +287,7 @@
 
         .name {
             font-size: 80%;
-            color: black;
+            color: white;
         }
 
         .familyName {
@@ -288,14 +296,27 @@
             color: white;
         }
 
+        .grade {
+            color: black;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
         .full {
             display: none;
-            color: #EBCD55;
         }
 
         .preview {
             display: inline-block;
         }
+    }
+
+    .return {
+        font-size: 1rem;
+        color: #a3784e;
+        margin-top: 20%; 
     }
 
     &.show {
@@ -306,17 +327,24 @@
         top: 0;
         left: 0;
         background: #777070;
+        background: #d8c9b4;
+        display: flex;
+        flex-direction: column;
+        // background: #e0decf;
 
         .avatar {
-            width: 80%;
+            width: 100%;
             border-radius: 0;
-            height: 60%;
             text-align: center;
-
             background: rgba(255, 255, 255, 0);
+            height: 50%;
+
+            img {
+                position: relative;
+            }
 
             .full {
-                display: inline-block;
+                display: block;
             }
 
             .preview {
@@ -325,7 +353,14 @@
         }
 
         .user {
-            font-size: 200%;
+            .name {
+                font-size: 1.8rem;
+                color: black;
+            }
+            .familyName {
+                color: #656565;
+                font-size: 1.5rem;
+            }
 
             .full {
                 display: inline-block;
@@ -385,4 +420,13 @@
         font-size: 2.5rem;
     }
 
+}
+
+.button {
+    margin: 5px;
+    padding: 20px 28px 15px;
+    background: #6d2c6d;
+    color: white;
+    border: 2px solid purple;
+    text-transform: uppercase;
 }
