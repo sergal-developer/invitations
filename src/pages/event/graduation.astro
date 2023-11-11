@@ -1,218 +1,492 @@
 ---
 import Main from "../../layouts/Main.astro";
+
+const data = [
+  {
+    name: "Ana Alicia",
+    familyName: "Manguilar del Angel",
+    photo: "AnaAliciaManguilarDelAngel.jpg",
+    preview: "AnaAliciaManguilarDelAngel-removebg-preview.png",
+    grade: "Enfermera Auxiliar",
+  },
+  {
+    name: "Argelia Lorena",
+    familyName: "Tavera Sanchez",
+    photo: "ArgeliaLorenaTaveraSanchez.jpg",
+    preview: "ArgeliaLorenaTaveraSanchez-removebg-preview.png",
+    grade: "Enfermera Auxiliar",
+  },
+  {
+    name: "Kasandra",
+    familyName: "Rivera Cortes",
+    photo: "KasandraRiveraCortes.jpg",
+    preview: "KasandraRiveraCortes-removebg-preview.png",
+    grade: "Enfermera Auxiliar",
+  },
+  {
+    name: "Judith Citlali",
+    familyName: "Ruiz Rocha",
+    photo: "JudithCitlaliRuizRocha.jpg",
+    preview: "JudithCitlaliRuizRocha-removebg-preview.png",
+    grade: "Enfermera Auxiliar",
+  },
+  {
+    name: "Karen",
+    familyName: "Neyra Villegas",
+    photo: "KarenNeyraVillegas.jpg",
+    preview: "KarenNeyraVillegas-removebg-preview.png",
+    grade: "Enfermera Auxiliar",
+  },
+  {
+    name: "Teresa",
+    familyName: "Zaragoza Luna",
+    photo: "TeresaZaragozaLuna.jpg",
+    preview: "TeresaZaragozaLuna-removebg-preview.png",
+    grade: "Enfermera Auxiliar",
+  },
+  {
+    name: "María del Rosario",
+    familyName: "Calva de la Cruz",
+    photo: "MaríadelRosarioCalvaCruz.jpg",
+    preview: "MaríadelRosarioCalvaCruz-removebg-preview.png",
+    grade: "Enfermera Auxiliar",
+  },
+
+  {
+    name: "Pablo Alberto",
+    familyName: "Fernández Miguel",
+    photo: "PabloAlbertoFernándezMiguel.jpg",
+    preview: "PabloAlbertoFernándezMiguel-removebg-preview.png",
+    grade: "Enfermero Auxiliar",
+  },
+  {
+    name: "Maria Dolores",
+    familyName: "Rocha Castillo",
+    photo: null,
+    preview: null,
+  },
+  {
+    name: "Angelica Joseph",
+    familyName: "Morales Rosas",
+    photo: null,
+    preview: null,
+  },
+  {
+    name: "Mayte Guadalupe",
+    familyName: "Ramirez Ortega",
+    photo: "MayteGuadalupeRamirezOrtega.jpg",
+    preview: "MayteGuadalupeRamirezOrtega-removebg-preview.png",
+    grade: "Enfermera Auxiliar",
+  },
+  {
+    name: "Elizabeth",
+    familyName: "Ortega Eliosa",
+    photo: "ElizabethOrtegaEliosa.jpg",
+    preview: "ElizabethOrtegaEliosa-removebg-preview.png",
+    grade: "Enfermera Auxiliar",
+  },
+  {
+    name: "Martha Elizabeth",
+    familyName: "Moreno Villanueva",
+    photo: "MarthaElizabethMorenoVillanueva.jpg",
+    preview: "MarthaElizabethMorenoVillanueva-removebg-preview.png",
+    grade: "Enfermera Auxiliar",
+  },
+  {
+    name: "Fabiana",
+    familyName: "Dominguez Robles",
+    photo: "FabianaDominguezRobles.jpg",
+    preview: "FabianaDominguezRobles-removebg-preview.png",
+    grade: "Enfermera Auxiliar",
+  },
+  {
+    name: "Esly Renata",
+    familyName: "Hernandez Martinez",
+    photo: "EslyRenataHernandezMartinez.jpg",
+    preview: "EslyRenataHernandezMartinez-removebg-preview.png",
+    grade: "Enfermera Auxiliar",
+  },
+  {
+    name: "Danna Mariel",
+    familyName: "Peña Cavala",
+    photo: "DannaMarielPenaCavala.jpg",
+    preview: "DannaMarielPenaCavala-removebg-preview.png",
+    grade: "Enfermera Auxiliar",
+  },
+  {
+    name: "Perla",
+    familyName: "Juarez Gutierrez",
+    photo: "PerlaJuarezGutierrez.jpg",
+    preview: "PerlaJuarezGutierrez-removebg-preview.png",
+    grade: "Enfermera Auxiliar",
+  },
+  {
+    name: "Ana Karen",
+    familyName: "Gonzalez Garcia",
+    photo: "AnaKarenGonzalezGarcia.jpg",
+    preview: "AnaKarenGonzalezGarcia-removebg-preview.png",
+    grade: "Enfermera Auxiliar",
+  },
+  {
+    name: "Bustos Canchola",
+    familyName: "Flor Cristina",
+    photo: "BustosCancholaFlorCristina.jpg",
+    preview: "BustosCancholaFlorCristina-removebg-preview.png",
+    grade: "Enfermera Auxiliar",
+  },
+  {
+    name: "Daphne",
+    familyName: "Fernández Chávez",
+    photo: "DaphneFernándezChavez.jpg",
+    preview: "DaphneFernándezChavez-removebg-preview.png",
+    grade: "Enfermera Auxiliar",
+  },
+  {
+    name: "Yahir Alejandro",
+    familyName: "Flores Huerta",
+    photo: "YahirAlejandroFloresHuerta.jpg",
+    preview: "YahirAlejandroFloresHuerta-removebg-preview.png",
+    grade: "Enfermero Auxiliar",
+  },
+];
 ---
 
 <Main title="Invitations">
-
   <!-- <div class="control-audio"></div> -->
   <div class="control-audio">
     <img src="/invitations/img/volume.svg" alt="" />
-    <audio id="audio-background" src="/invitations/data/background-audio-1.mp3" autoplay loop></audio>
+    <audio id="audio-background" src="/invitations/data/emotional-cinematic.mp3" autoplay loop></audio>
   </div>
-  
+
   <div class="app-page graduation">
-    <!-- <img class="ornament top" src="/invitations/img/ornament.svg" alt=""> -->
     <div class="body-content">
-      <div class="school wow bounceInUp">CDC San Agustín</div>
-
-      <div class="image-lamp wow bounceInUp">
-        <img src="/invitations/img/lamp.svg" alt="" />
-      </div>
-
-      <p>tiene el honor de invitarlo a la:</p>
-
-      <div class="title-ceremony accent wow bounceInUp">
-        Ceremonia de <br />
-        <span>Graduación</span>
-
-      </div>
-      <div class="generation wow bounceInUp">Generación 2022 - 2023</div>
-
-      <div class="date wow bounceInUp">
-        <div class="name-day">
-          <span>Sábado</span>
-
-          <b>10:30 AM</b>
+      <section class="invitation-section">
+        <div class="school wow animate__animated bounceInUp">
+          CDC San Agustín
         </div>
 
-        <div class="day">16</div>
-
-        <div class="month">
-          <span>Diciembre</span>
-
-          <b>2023</b>
-        </div>
-      </div>
-
-      <div class="poem ">
-
-        <div class="title accent wow bounceInUp">
-          Juramento para Enfermeras de Florence Nightingale
-        </div>
-      
-        <img src="/invitations/img/FlorenceNightingale.png" alt=""> 
-
-        <p class="wow bounceInUp">
-          Juro solemnemente ante Dios y en presencia de esta asamblea llevar una
-          vida digna y ejercer mi profesión honradamente.
-        </p>
-
-        <p class="wow bounceInUp">
-          Me abstendré de todo cuanto sea nocivo o dañino, y no tomaré ni
-          suministraré cualquier substancia o producto que sea perjudicial para
-          la salud.
-        </p>
-
-        <p class="wow bounceInUp">
-          Haré todo lo que esté a mi alcance para elevar el nivel de la
-          enfermería y consideraré como confidencial toda información que me sea
-          revelada en el ejercicio de mi profesión, así como todos los asuntos
-          familiares en mis pacientes.
-        </p>
-
-        <p class="wow bounceInUp">
-          Seré una fiel asistente de los médicos y dedicaré mi vida al bienestar
-          de las personas confiadas a mi cuidado.
-        </p>
-      </div>
-
-      <div class="title wow bounceInUp">
-        <b>Honorables Graduados</b>
-      </div>
-
-      <div class="graduates">
-        <div class="wow bounceInUp">Ana Alicia <span> Manguilar del Angel</span></div>
-        <div class="wow bounceInUp">Argelia Lorena <span> Tavera Sanchez</span></div>
-        <div class="wow bounceInUp">Kasandra <span> Rivera Cortes</span> </div>
-        <div class="wow bounceInUp">Judith Citlali <span> Ruiz Rocha</span> </div>
-        <div class="wow bounceInUp">Karen <span> Neyra Villegas</span> </div>
-        <div class="wow bounceInUp">Teresa <span> Zaragoza Luna</span> </div>
-        <div class="wow bounceInUp">María del Rosario <span> Calva de la Cruz</span> </div>
-        <div class="wow bounceInUp">Maria Dolores <span> Rocha Castillo</span> </div>
-        <div class="wow bounceInUp">Angelica Joseph <span> Morales Rosas</span> </div>
-        <div class="wow bounceInUp">Pablo Alberto <span> Fernández Miguel</span> </div>
-        <div class="wow bounceInUp">Esly Renata <span> Hernández Martínez</span> </div>
-      </div>
-
-      <div class="box">
-        <div style="--i:1;" class="item">
-          <img src="/invitations/graduates/ANDREA-FLORES-APOLONIO.jpg" alt="">
-          <div class="names">Ana Alicia <span> Manguilar del Angel</span></div>
-        </div>
-        <div style="--i:2;" class="item">
-          <img src="/invitations/graduates/ARACELI-HUERTA-GALLARDO.jpg" alt="">
-          <div class="names">Ana Alicia <span> Manguilar del Angel</span></div>
-        </div>
-        <div style="--i:3;" class="item">
-          <img src="/invitations/graduates/MELANY-KAYZA-FABILA.jpg" alt="">
-          <div class="names">Ana Alicia <span> Manguilar del Angel</span></div>
-        </div>
-        <div style="--i:4;" class="item">
-          <img src="/invitations/graduates/OLDAY-GASPAR-GARCIA.jpg" alt="">
-          <div class="names">Ana Alicia <span> Manguilar del Angel</span></div>
-        </div>
-        <div style="--i:5;" class="item">
-          <img src="/invitations/graduates/RUTH-CRISTAL-COORDERO-CASTRO.jpg" alt="">
-          <div class="names">Ana Alicia <span> Manguilar del Angel</span></div>
-        </div>
-        <div style="--i:6;" class="item">
-          <img src="/invitations/graduates/SALATIEL-VEGA-FILIO.jpg" alt="">
-          <div class="names">Ana Alicia <span> Manguilar del Angel</span></div>
-        </div>
-        <div style="--i:7;" class="item">
-          <img src="/invitations/graduates/SARAHI-BARRETO-GIL.jpg" alt="">
-          <div class="names">Ana Alicia <span> Manguilar del Angel</span></div>
-        </div>
-        
-      </div>
-
-
-      <div class="title wow bounceInUp">
-        <b>Comité Ejecutivo</b>
-      </div>
-
-      <div class="agent wow bounceInUp">
-        Directora DIF Nezahualcóyotl
-        <div class="accent">Claudia Mónica Pérez Cerqueda</div>
-      </div>
-
-      <div class="agent wow bounceInUp">
-        Subdirector
-        <div class="accent">Andrés Roberto Noguez Morales</div>
-      </div>
-
-      <div class="agent wow bounceInUp">
-        Coordinador
-        <div class="accent">Miguel Ángel Córdova Velázquez</div>
-      </div>
-
-      <div class="agent wow bounceInUp">
-        Profesora
-        <div class="accent">Monserrat Hernández García</div>
-      </div>
-
-
-      <div class="congratulations wow bounceInUp">
-        <div class="birrete">
-          <img src="/invitations/img/birrete.svg" alt="" />
+        <div class="image-lamp wow animate__animated bounceInUp">
+          <img src="/invitations/img/lamp.svg" alt="" />
         </div>
 
-        Felicidades a los Graduados!!
-      </div>
+        <p>tiene el honor de invitarlo a la:</p>
 
+        <div class="title-ceremony accent wow animate__animated bounceInUp">
+          Ceremonia de <br />
+          <span>Graduación</span>
+        </div>
+        <div class="generation wow animate__animated bounceInUp">
+          Generación 2022 - 2023
+        </div>
+
+        <div class="date wow animate__animated bounceInUp">
+          <div class="name-day">
+            <span>Sábado</span>
+
+            <b>10:30 AM</b>
+          </div>
+
+          <div class="day">16</div>
+
+          <div class="month">
+            <span>Diciembre</span>
+
+            <b>2023</b>
+          </div>
+        </div>
+      </section>
+
+      <section class="countdown">
+        <div class="title" id="headline">El evento Comienza en: </div>
+        <div id="countdown">
+          <ul>
+            <li><span id="days"></span>Dias</li>
+            <li><span id="hours"></span>Horas</li>
+            <li><span id="minutes"></span>Minutos</li>
+            <li><span id="seconds"></span>Segundos</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="poem-section">
+        <div class="poem">
+          <div class="title accent wow animate__animated bounceInUp">
+            Juramento para Enfermeras de Florence Nightingale
+          </div>
+
+          <button id="toggleButton" class="playerButton">Escuchar</button>
+          <audio id="myAudio" src="/invitations/data/juramento.mp3" preload="auto"></audio>
+
+          <img src="/invitations/img/florence-nightingale.png" alt="" />
+
+          <p>
+            Juro ejercer mi profesión en total beneficio para la humanidad, <br
+            /> sin distinción de credo, raza o condición social.
+          </p>
+
+          <p>
+            Hoy y siempre velare por mis semejantes, en los momentos <br />
+            significativos de la vida: <br />
+            El nacimiento, <br /> La infortuna de la enfermedad, <br /> o el momento
+            innegable de la muerte.
+          </p>
+          <p>
+            Día a día con plena dedicación mantendré actualizados mis
+            conocimientos, <br /> aplicaré los principios bioéticos que guiaran mis
+            acciones con indivisible conciencia, <br /> y honraré el secreto profesional
+            que me confieran.
+          </p>
+          <p>
+            Con amor y pleno compromiso contribuiré en el desarrollo de mi
+            profesión.
+          </p>
+          <p>Hago estas promesas solemne y libremente.</p>
+          <p>
+            si así lo hiciere que se me premie, o de lo contrario estaré
+            dispuesta a que se me demande.
+          </p>
+          <p>¡LO JURO!</p>
+        </div>
+      </section>
+
+      <section class="graduates-section">
+        <div class="title wow animate__animated bounceInUp">
+          <b>Honorables Graduados</b>
+        </div>
+
+        <div class="graduates">
+          {
+            data.map((graduate) => {
+              return graduate.photo ? (
+                <div class="graduateUser">
+                  <div class="avatar">
+                    <img
+                      class="preview"
+                      src={"/invitations/graduates/" + graduate.preview}
+                      alt={graduate.photo}
+                    />
+                    <img
+                      class="full"
+                      src={"/invitations/graduates/" + graduate.photo}
+                      alt={graduate.photo}
+                    />
+                  </div>
+                  <div class="user">
+                    <div class="full">{graduate.grade}</div>
+                    <div class="name">{graduate.name}</div>
+                    <div class="familyName">{graduate.familyName}</div>
+
+                    <div class="full">Regresar</div>
+                  </div>
+                </div>
+              ) : (
+                ""
+              );
+            })
+          }
+        </div>
+      </section>
+
+      <section class="graduates-section">
+        <div class="title wow animate__animated bounceInUp">
+          <b>Honorables Graduados</b>
+        </div>
+
+        <div class="box">
+          {
+            data.map((graduate, index) => {
+              let counter = index + 1;
+              return graduate.photo ? (
+                <div style={"--i:" + counter + ";"} class="item">
+                  <img
+                    src={"/invitations/graduates/" + graduate.photo}
+                    alt={graduate.photo}
+                  />
+                </div>
+              ) : (
+                ""
+              );
+            })
+          }
+        </div>
+      </section>
+
+      <section class="sponsors-section">
+        <div class="title wow animate__animated bounceInUp">
+          <b>Comité Ejecutivo</b>
+        </div>
+
+        <div class="agent wow animate__animated bounceInUp">
+          Directora DIF Nezahualcóyotl
+          <div class="accent">Claudia Mónica Pérez Cerqueda</div>
+        </div>
+
+        <div class="agent wow animate__animated bounceInUp">
+          Subdirector
+          <div class="accent">Andrés Roberto Noguez Morales</div>
+        </div>
+
+        <div class="agent wow animate__animated bounceInUp">
+          Coordinador
+          <div class="accent">Miguel Ángel Córdova Velázquez</div>
+        </div>
+
+        <div class="agent wow animate__animated bounceInUp">
+          Profesora
+          <div class="accent">Monserrat Hernández García</div>
+        </div>
+      </section>
+
+      <section class="final-section">
+        <div class="congratulations wow animate__animated bounceInUp">
+          <div class="birrete">
+            <img src="/invitations/img/birrete.svg" alt="" />
+          </div>
+ 
+          Felicidades a los Graduados!!
+        </div>
+      </section>
     </div>
   </div>
-
-
 
   <!-- <img class="ornament bottom" src="/img/ornament.svg" alt=""> -->
 </Main>
 
 <script>
+  // import WOW from "../../plugins/WOW.js";
+  // // declare let WOW: any;
+  // const wow = new WOW({
+  //   boxClass: "wow", // default
+  //   animateClass: "animated", // default
+  //   offset: 0, // default
+  //   mobile: true, // default
+  //   live: true, // default
+  // });
+  // wow.init();
+</script>
+
+<!--  -->
+<script>
   /* 
   import { APP } from "../../data/main";
   const app = new APP();
   */
-  const box: any = document.querySelector('.box');
-  const boxItems = document.querySelectorAll('.box .item');
+  const box: any = document.querySelector(".box");
+  const boxItems = document.querySelectorAll(".box .item");
 
-  document.documentElement.style
-    .setProperty('--numGraduates', `${ boxItems.length }`);
-  const list = getComputedStyle(document.documentElement)
-    .getPropertyValue('--numGraduates');
+  document.documentElement.style.setProperty(
+    "--numGraduates",
+    `${boxItems.length}`
+  );
+  const list = getComputedStyle(document.documentElement).getPropertyValue(
+    "--numGraduates"
+  );
 
   let step = 0;
   let steps = 360 / boxItems.length;
 
   setInterval(() => {
-    // if(step > 360) { step = 0; }
-    box.style.transform = `perspective(1000px) rotateY(${ step }deg)`;
+    if (step > 360) {
+      step = 0;
+    }
+    box.style.transform = `perspective(1000px) rotateY(${step}deg)`;
     step = step + steps;
-  }, 2000);
+  }, 1000);
 
-
-  const controlAudio = document.querySelector('.control-audio');
-
-  controlAudio.addEventListener("click", () => {
-    playPause();
+  const graduates = document.querySelectorAll(".graduates .graduateUser");
+  graduates.forEach((graduate) => {
+    graduate.addEventListener("click", () => {
+      if (graduate.classList.contains("show")) {
+        graduate.classList.remove("show");
+      } else {
+        graduate.classList.add("show");
+      }
+    });
   });
 
-  function playPause() {
-    console.log('exec')
-    const audio = document.querySelector('#audio-background');
-    const icon = document.querySelector('.control-audio img');
-    const isMuted = audio.hasAttribute('muted');
-    console.log('isMuted: ', isMuted);
-    if( isMuted ) {
-      audio.removeAttribute('muted');
-      audio.setAttribute('src', '/invitations/data/background-audio-1.mp3');
-      icon.setAttribute('src', '/invitations/img/mute.svg');
+  const controlAudio = document.querySelector(".control-audio");
+  controlAudio.addEventListener("click", () => {
+    const current = playPause("#audio-background");
+    const icon = document.querySelector(".control-audio img");
+    if (current) {
+      icon.setAttribute("src", "/invitations/img/volume.svg");
     } else {
+      icon.setAttribute("src", "/invitations/img/mute.svg");
+    }
+  });
+
+  const toggleButton = document.getElementById("toggleButton");
+  toggleButton.addEventListener("click", () => {
+    playPause("#myAudio");
+  });
+
+  // const animatedDiv = document.getElementById("animatedDiv");
+
+  // window.addEventListener("scroll", function() {
+  //   // Calcula el porcentaje de desplazamiento
+  //   const scrollPercentage = (document.documentElement.scrollTop + window.innerHeight) / document.documentElement.scrollHeight * 100;
+
+  //   // Aplica la rotación en el eje Y basada en el porcentaje de desplazamiento
+  //   animatedDiv.style.transform = `translate(-50%, -50%) rotateX(${scrollPercentage * 10}deg)`;
+  // });
+
+  function playPause(audioTag) {
+    const audio: any = document.querySelector(audioTag);
+    if (audio.paused) {
+      // Si está pausado, reprodúcelo
+      audio.play();
+    } else {
+      // Si se está reproduciendo, paúsalo
+      audio.pause();
+    }
+
+    return audio.paused;
+  }
+
+  function coundown() {
+    const second = 1000,
+      minute = second * 60,
+      hour = minute * 60,
+      day = hour * 24;
+
+    //I'm adding this section so I don't have to keep updating this pen every year :-)
+    //remove this if you don't need it
+    let today: any = new Date(),
+      dd = String(today.getDate()).padStart(2, "0"),
+      mm = String(today.getMonth() + 1).padStart(2, "0"),
+      yyyy = today.getFullYear(),
+      nextYear = yyyy,
+      dayMonth = "12/16/",
+      goal = "12/16/2023";
       
 
-      audio.setAttribute('muted', '');
-      audio.setAttribute('src', '');
-      icon.setAttribute('src', '/invitations/img/volume.svg');
+    today = mm + "/" + dd + "/" + yyyy;
+    if (today > goal) {
+      goal = dayMonth + nextYear;
     }
-  }
+    //end
+
+    const countDown = new Date(goal).getTime(),
+      x = setInterval(() => {
+        const now = new Date().getTime(),
+          distance = countDown - now;
+
+        (document.getElementById("days").innerText = String(Math.floor(distance / day)));
+          (document.getElementById("hours").innerText = String(Math.floor((distance % day) / hour)));
+          (document.getElementById("minutes").innerText = String(Math.floor((distance % hour) / minute)));
+          (document.getElementById("seconds").innerText = String(Math.floor((distance % minute) / second)));
+
+        //do something later when date is reached
+        if (distance < 0) {
+          console.log('distance: ', distance);
+          // document.getElementById("headline").innerText = "It's my birthday!";
+          // document.getElementById("countdown").style.display = "none";
+          // document.getElementById("content").style.display = "block";
+          clearInterval(x);
+        }
+        //seconds
+      }, 0);
+  };
+
+  coundown();
 </script>
