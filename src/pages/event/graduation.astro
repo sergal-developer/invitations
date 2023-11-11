@@ -155,7 +155,7 @@ const data = [
   <!-- <div class="control-audio"></div> -->
   <div class="control-audio">
     <img src="/invitations/img/volume.svg" alt="" />
-    <!-- <audio id="audio-background" src="/invitations/data/emotional-cinematic.mp3" autoplay loop></audio> -->
+    <audio id="audio-background" src="/invitations/data/emotional-cinematic.mp3" autoplay loop></audio>
   </div>
 
   <div class="app-page graduation">
@@ -194,9 +194,19 @@ const data = [
             <b>2023</b>
           </div>
         </div>
+
+        <div class="locate">
+          <a
+            class="link"
+            href="https://maps.app.goo.gl/XFZaHHFES3ZJfX557"
+            target="_blank"
+          >
+            Ubicación
+          </a>
+        </div>
       </section>
 
-      <section class="countdown">
+      <section class="countdown-section countdown">
         <div class="title" id="headline">El evento Comienza en:</div>
         <div id="countdown">
           <ul>
@@ -305,7 +315,7 @@ const data = [
         </div>
       </section>
 
-      <section class="graduates-section">
+      <section class="gallery-section">
         <div class="title wow animate__animated bounceInUp">
           <b>Felicitaciones</b>
         </div>
@@ -358,20 +368,8 @@ const data = [
           <div class="accent">Monserrat Hernández García</div>
         </div>
       </section>
-      <!-- 
-      <section class="final-section">
-        <div class="congratulations wow animate__animated bounceInUp">
-          <div class="birrete">
-            <img src="/invitations/img/birrete.svg" alt="" />
-          </div>
- 
-          Felicidades a los Graduados!!
-        </div>
-      </section> -->
     </div>
   </div>
-
-  <!-- <img class="ornament bottom" src="/img/ornament.svg" alt=""> -->
 </Main>
 
 <script>
@@ -444,13 +442,14 @@ const data = [
 
   // const animatedDiv = document.getElementById("animatedDiv");
 
-  // window.addEventListener("scroll", function() {
-  //   // Calcula el porcentaje de desplazamiento
-  //   const scrollPercentage = (document.documentElement.scrollTop + window.innerHeight) / document.documentElement.scrollHeight * 100;
+  window.addEventListener("scroll", function () {
+    // Calcula el porcentaje de desplazamiento
+    const scrollPercentage = getPercentScroll();
+    console.log("scrollPercentage: ", scrollPercentage);
 
-  //   // Aplica la rotación en el eje Y basada en el porcentaje de desplazamiento
-  //   animatedDiv.style.transform = `translate(-50%, -50%) rotateX(${scrollPercentage * 10}deg)`;
-  // });
+    // Aplica la rotación en el eje Y basada en el porcentaje de desplazamiento
+    // animatedDiv.style.transform = `translate(-50%, -50%) rotateX(${scrollPercentage * 10}deg)`;
+  });
 
   function playPause(audioTag) {
     const audio: any = document.querySelector(audioTag);
@@ -515,6 +514,14 @@ const data = [
         }
         //seconds
       }, 0);
+  }
+
+  function getPercentScroll() {
+    return Math.round(
+      ((document.documentElement.scrollTop + window.innerHeight) /
+        document.documentElement.scrollHeight) *
+        100
+    );
   }
 
   coundown();
