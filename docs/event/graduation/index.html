@@ -9,176 +9,439 @@
 		<link rel="icon" type="image/png" sizes="32x32" href="/invitations/favicon-32x32.png">
 		<link rel="icon" type="image/png" sizes="16x16" href="/invitations/favicon-16x16.png">
 		<link rel="manifest" href="/invitations/site.webmanifest">
-		<link rel="stylesheet" href="/invitations/css/animate.min.css">
+		<!-- <link rel="stylesheet" href="/invitations/css/animate.min.css"> -->
 		<meta name="generator" content="Astro v2.10.15">
+
 		
 		<title>Invitations</title>
-	<link rel="stylesheet" href="/invitations/main.css" /><script type="module">const s=document.querySelector(".box"),n=document.querySelectorAll(".box .item");document.documentElement.style.setProperty("--numGraduates",`${n.length}`);getComputedStyle(document.documentElement).getPropertyValue("--numGraduates");let e=0,r=360/n.length;setInterval(()=>{s.style.transform=`perspective(1000px) rotateY(${e}deg)`,e=e+r},2e3);const c=document.querySelector(".control-audio");c.addEventListener("click",()=>{i()});function i(){console.log("exec");const t=document.querySelector("#audio-background"),o=document.querySelector(".control-audio img"),u=t.hasAttribute("muted");console.log("isMuted: ",u),u?(t.removeAttribute("muted"),t.setAttribute("src","/invitations/data/background-audio-1.mp3"),o.setAttribute("src","/invitations/img/mute.svg")):(t.setAttribute("muted",""),t.setAttribute("src",""),o.setAttribute("src","/invitations/img/volume.svg"))}
+	<link rel="stylesheet" href="/invitations/main.css" /><script type="module">const p=document.querySelector(".box"),u=document.querySelectorAll(".box .item");document.documentElement.style.setProperty("--numGraduates",`${u.length}`);getComputedStyle(document.documentElement).getPropertyValue("--numGraduates");let s=0,S=360/u.length;setInterval(()=>{s>360&&(s=0),p.style.transform=`perspective(1000px) rotateY(${s}deg)`,s=s+S},1e3);const f=document.querySelectorAll(".graduates .graduateUser");f.forEach(e=>{e.addEventListener("click",()=>{e.classList.contains("show")?e.classList.remove("show"):e.classList.add("show")})});const v=document.querySelector(".control-audio");v.addEventListener("click",()=>{const e=d("#audio-background"),t=document.querySelector(".control-audio img");e?t.setAttribute("src","/invitations/img/volume.svg"):t.setAttribute("src","/invitations/img/mute.svg")});const x=document.getElementById("toggleButton");x.addEventListener("click",()=>{d("#myAudio")});function d(e){const t=document.querySelector(e);return t.paused?t.play():t.pause(),t.paused}function E(){let o=new Date,i=String(o.getDate()).padStart(2,"0"),a=String(o.getMonth()+1).padStart(2,"0"),c=o.getFullYear(),l=c,m="12/16/",r="12/16/2023";o=a+"/"+i+"/"+c,o>r&&(r=m+l);const g=new Date(r).getTime(),y=setInterval(()=>{const h=new Date().getTime(),n=g-h;document.getElementById("days").innerText=String(Math.floor(n/864e5)),document.getElementById("hours").innerText=String(Math.floor(n%864e5/36e5)),document.getElementById("minutes").innerText=String(Math.floor(n%36e5/6e4)),document.getElementById("seconds").innerText=String(Math.floor(n%6e4/1e3)),n<0&&(console.log("distance: ",n),clearInterval(y))},0)}E();
 </script></head>
 	<body class="astro-HSP6OTUF">
 		
-
   
   <div class="control-audio">
     <img src="/invitations/img/volume.svg" alt="">
-    <audio id="audio-background" src="/invitations/data/background-audio-1.mp3" autoplay loop></audio>
+    <audio id="audio-background" src="/invitations/data/emotional-cinematic.mp3" autoplay loop></audio>
   </div>
-  
+
   <div class="app-page graduation">
-    <!-- <img class="ornament top" src="/invitations/img/ornament.svg" alt=""> -->
     <div class="body-content">
-      <div class="school wow bounceInUp">CDC San Agustín</div>
-
-      <div class="image-lamp wow bounceInUp">
-        <img src="/invitations/img/lamp.svg" alt="">
-      </div>
-
-      <p>tiene el honor de invitarlo a la:</p>
-
-      <div class="title-ceremony accent wow bounceInUp">
-        Ceremonia de <br>
-        <span>Graduación</span>
-
-      </div>
-      <div class="generation wow bounceInUp">Generación 2022 - 2023</div>
-
-      <div class="date wow bounceInUp">
-        <div class="name-day">
-          <span>Sábado</span>
-
-          <b>10:30 AM</b>
+      <section class="invitation-section">
+        <div class="school wow animate__animated bounceInUp">
+          CDC San Agustín
         </div>
 
-        <div class="day">16</div>
-
-        <div class="month">
-          <span>Diciembre</span>
-
-          <b>2023</b>
-        </div>
-      </div>
-
-      <div class="poem ">
-
-        <div class="title accent wow bounceInUp">
-          Juramento para Enfermeras de Florence Nightingale
-        </div>
-      
-        <img src="/invitations/img/FlorenceNightingale.png" alt=""> 
-
-        <p class="wow bounceInUp">
-          Juro solemnemente ante Dios y en presencia de esta asamblea llevar una
-          vida digna y ejercer mi profesión honradamente.
-        </p>
-
-        <p class="wow bounceInUp">
-          Me abstendré de todo cuanto sea nocivo o dañino, y no tomaré ni
-          suministraré cualquier substancia o producto que sea perjudicial para
-          la salud.
-        </p>
-
-        <p class="wow bounceInUp">
-          Haré todo lo que esté a mi alcance para elevar el nivel de la
-          enfermería y consideraré como confidencial toda información que me sea
-          revelada en el ejercicio de mi profesión, así como todos los asuntos
-          familiares en mis pacientes.
-        </p>
-
-        <p class="wow bounceInUp">
-          Seré una fiel asistente de los médicos y dedicaré mi vida al bienestar
-          de las personas confiadas a mi cuidado.
-        </p>
-      </div>
-
-      <div class="title wow bounceInUp">
-        <b>Honorables Graduados</b>
-      </div>
-
-      <div class="graduates">
-        <div class="wow bounceInUp">Ana Alicia <span> Manguilar del Angel</span></div>
-        <div class="wow bounceInUp">Argelia Lorena <span> Tavera Sanchez</span></div>
-        <div class="wow bounceInUp">Kasandra <span> Rivera Cortes</span> </div>
-        <div class="wow bounceInUp">Judith Citlali <span> Ruiz Rocha</span> </div>
-        <div class="wow bounceInUp">Karen <span> Neyra Villegas</span> </div>
-        <div class="wow bounceInUp">Teresa <span> Zaragoza Luna</span> </div>
-        <div class="wow bounceInUp">María del Rosario <span> Calva de la Cruz</span> </div>
-        <div class="wow bounceInUp">Maria Dolores <span> Rocha Castillo</span> </div>
-        <div class="wow bounceInUp">Angelica Joseph <span> Morales Rosas</span> </div>
-        <div class="wow bounceInUp">Pablo Alberto <span> Fernández Miguel</span> </div>
-        <div class="wow bounceInUp">Esly Renata <span> Hernández Martínez</span> </div>
-      </div>
-
-      <div class="box">
-        <div style="--i:1;" class="item">
-          <img src="/invitations/graduates/ANDREA-FLORES-APOLONIO.jpg" alt="">
-          <div class="names">Ana Alicia <span> Manguilar del Angel</span></div>
-        </div>
-        <div style="--i:2;" class="item">
-          <img src="/invitations/graduates/ARACELI-HUERTA-GALLARDO.jpg" alt="">
-          <div class="names">Ana Alicia <span> Manguilar del Angel</span></div>
-        </div>
-        <div style="--i:3;" class="item">
-          <img src="/invitations/graduates/MELANY-KAYZA-FABILA.jpg" alt="">
-          <div class="names">Ana Alicia <span> Manguilar del Angel</span></div>
-        </div>
-        <div style="--i:4;" class="item">
-          <img src="/invitations/graduates/OLDAY-GASPAR-GARCIA.jpg" alt="">
-          <div class="names">Ana Alicia <span> Manguilar del Angel</span></div>
-        </div>
-        <div style="--i:5;" class="item">
-          <img src="/invitations/graduates/RUTH-CRISTAL-COORDERO-CASTRO.jpg" alt="">
-          <div class="names">Ana Alicia <span> Manguilar del Angel</span></div>
-        </div>
-        <div style="--i:6;" class="item">
-          <img src="/invitations/graduates/SALATIEL-VEGA-FILIO.jpg" alt="">
-          <div class="names">Ana Alicia <span> Manguilar del Angel</span></div>
-        </div>
-        <div style="--i:7;" class="item">
-          <img src="/invitations/graduates/SARAHI-BARRETO-GIL.jpg" alt="">
-          <div class="names">Ana Alicia <span> Manguilar del Angel</span></div>
-        </div>
-        
-      </div>
-
-
-      <div class="title wow bounceInUp">
-        <b>Comité Ejecutivo</b>
-      </div>
-
-      <div class="agent wow bounceInUp">
-        Directora DIF Nezahualcóyotl
-        <div class="accent">Claudia Mónica Pérez Cerqueda</div>
-      </div>
-
-      <div class="agent wow bounceInUp">
-        Subdirector
-        <div class="accent">Andrés Roberto Noguez Morales</div>
-      </div>
-
-      <div class="agent wow bounceInUp">
-        Coordinador
-        <div class="accent">Miguel Ángel Córdova Velázquez</div>
-      </div>
-
-      <div class="agent wow bounceInUp">
-        Profesora
-        <div class="accent">Monserrat Hernández García</div>
-      </div>
-
-
-      <div class="congratulations wow bounceInUp">
-        <div class="birrete">
-          <img src="/invitations/img/birrete.svg" alt="">
+        <div class="image-lamp wow animate__animated bounceInUp">
+          <img src="/invitations/img/lamp.svg" alt="">
         </div>
 
-        Felicidades a los Graduados!!
-      </div>
+        <p>tiene el honor de invitarlo a la:</p>
 
+        <div class="title-ceremony accent wow animate__animated bounceInUp">
+          Ceremonia de <br>
+          <span>Graduación</span>
+        </div>
+        <div class="generation wow animate__animated bounceInUp">
+          Generación 2022 - 2023
+        </div>
+
+        <div class="date wow animate__animated bounceInUp">
+          <div class="name-day">
+            <span>Sábado</span>
+
+            <b>10:30 AM</b>
+          </div>
+
+          <div class="day">16</div>
+
+          <div class="month">
+            <span>Diciembre</span>
+
+            <b>2023</b>
+          </div>
+        </div>
+      </section>
+
+      <section class="countdown">
+        <div class="title" id="headline">El evento Comienza en: </div>
+        <div id="countdown">
+          <ul>
+            <li><span id="days"></span>Dias</li>
+            <li><span id="hours"></span>Horas</li>
+            <li><span id="minutes"></span>Minutos</li>
+            <li><span id="seconds"></span>Segundos</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="poem-section">
+        <div class="poem">
+          <div class="title accent wow animate__animated bounceInUp">
+            Juramento para Enfermeras de Florence Nightingale
+          </div>
+
+          <button id="toggleButton" class="playerButton">Escuchar</button>
+          <audio id="myAudio" src="/invitations/data/juramento.mp3" preload="auto"></audio>
+
+          <img src="/invitations/img/florence-nightingale.png" alt="">
+
+          <p>
+            Juro ejercer mi profesión en total beneficio para la humanidad, <br> sin distinción de credo, raza o condición social.
+          </p>
+
+          <p>
+            Hoy y siempre velare por mis semejantes, en los momentos <br>
+            significativos de la vida: <br>
+            El nacimiento, <br> La infortuna de la enfermedad, <br> o el momento
+            innegable de la muerte.
+          </p>
+          <p>
+            Día a día con plena dedicación mantendré actualizados mis
+            conocimientos, <br> aplicaré los principios bioéticos que guiaran mis
+            acciones con indivisible conciencia, <br> y honraré el secreto profesional
+            que me confieran.
+          </p>
+          <p>
+            Con amor y pleno compromiso contribuiré en el desarrollo de mi
+            profesión.
+          </p>
+          <p>Hago estas promesas solemne y libremente.</p>
+          <p>
+            si así lo hiciere que se me premie, o de lo contrario estaré
+            dispuesta a que se me demande.
+          </p>
+          <p>¡LO JURO!</p>
+        </div>
+      </section>
+
+      <section class="graduates-section">
+        <div class="title wow animate__animated bounceInUp">
+          <b>Honorables Graduados</b>
+        </div>
+
+        <div class="graduates">
+          <div class="graduateUser">
+                  <div class="avatar">
+                    <img class="preview" src="/invitations/graduates/AnaAliciaManguilarDelAngel-removebg-preview.png" alt="AnaAliciaManguilarDelAngel.jpg">
+                    <img class="full" src="/invitations/graduates/AnaAliciaManguilarDelAngel.jpg" alt="AnaAliciaManguilarDelAngel.jpg">
+                  </div>
+                  <div class="user">
+                    <div class="full">Enfermera Auxiliar</div>
+                    <div class="name">Ana Alicia</div>
+                    <div class="familyName">Manguilar del Angel</div>
+
+                    <div class="full">Regresar</div>
+                  </div>
+                </div><div class="graduateUser">
+                  <div class="avatar">
+                    <img class="preview" src="/invitations/graduates/ArgeliaLorenaTaveraSanchez-removebg-preview.png" alt="ArgeliaLorenaTaveraSanchez.jpg">
+                    <img class="full" src="/invitations/graduates/ArgeliaLorenaTaveraSanchez.jpg" alt="ArgeliaLorenaTaveraSanchez.jpg">
+                  </div>
+                  <div class="user">
+                    <div class="full">Enfermera Auxiliar</div>
+                    <div class="name">Argelia Lorena</div>
+                    <div class="familyName">Tavera Sanchez</div>
+
+                    <div class="full">Regresar</div>
+                  </div>
+                </div><div class="graduateUser">
+                  <div class="avatar">
+                    <img class="preview" src="/invitations/graduates/KasandraRiveraCortes-removebg-preview.png" alt="KasandraRiveraCortes.jpg">
+                    <img class="full" src="/invitations/graduates/KasandraRiveraCortes.jpg" alt="KasandraRiveraCortes.jpg">
+                  </div>
+                  <div class="user">
+                    <div class="full">Enfermera Auxiliar</div>
+                    <div class="name">Kasandra</div>
+                    <div class="familyName">Rivera Cortes</div>
+
+                    <div class="full">Regresar</div>
+                  </div>
+                </div><div class="graduateUser">
+                  <div class="avatar">
+                    <img class="preview" src="/invitations/graduates/JudithCitlaliRuizRocha-removebg-preview.png" alt="JudithCitlaliRuizRocha.jpg">
+                    <img class="full" src="/invitations/graduates/JudithCitlaliRuizRocha.jpg" alt="JudithCitlaliRuizRocha.jpg">
+                  </div>
+                  <div class="user">
+                    <div class="full">Enfermera Auxiliar</div>
+                    <div class="name">Judith Citlali</div>
+                    <div class="familyName">Ruiz Rocha</div>
+
+                    <div class="full">Regresar</div>
+                  </div>
+                </div><div class="graduateUser">
+                  <div class="avatar">
+                    <img class="preview" src="/invitations/graduates/KarenNeyraVillegas-removebg-preview.png" alt="KarenNeyraVillegas.jpg">
+                    <img class="full" src="/invitations/graduates/KarenNeyraVillegas.jpg" alt="KarenNeyraVillegas.jpg">
+                  </div>
+                  <div class="user">
+                    <div class="full">Enfermera Auxiliar</div>
+                    <div class="name">Karen</div>
+                    <div class="familyName">Neyra Villegas</div>
+
+                    <div class="full">Regresar</div>
+                  </div>
+                </div><div class="graduateUser">
+                  <div class="avatar">
+                    <img class="preview" src="/invitations/graduates/TeresaZaragozaLuna-removebg-preview.png" alt="TeresaZaragozaLuna.jpg">
+                    <img class="full" src="/invitations/graduates/TeresaZaragozaLuna.jpg" alt="TeresaZaragozaLuna.jpg">
+                  </div>
+                  <div class="user">
+                    <div class="full">Enfermera Auxiliar</div>
+                    <div class="name">Teresa</div>
+                    <div class="familyName">Zaragoza Luna</div>
+
+                    <div class="full">Regresar</div>
+                  </div>
+                </div><div class="graduateUser">
+                  <div class="avatar">
+                    <img class="preview" src="/invitations/graduates/MaríadelRosarioCalvaCruz-removebg-preview.png" alt="MaríadelRosarioCalvaCruz.jpg">
+                    <img class="full" src="/invitations/graduates/MaríadelRosarioCalvaCruz.jpg" alt="MaríadelRosarioCalvaCruz.jpg">
+                  </div>
+                  <div class="user">
+                    <div class="full">Enfermera Auxiliar</div>
+                    <div class="name">María del Rosario</div>
+                    <div class="familyName">Calva de la Cruz</div>
+
+                    <div class="full">Regresar</div>
+                  </div>
+                </div><div class="graduateUser">
+                  <div class="avatar">
+                    <img class="preview" src="/invitations/graduates/PabloAlbertoFernándezMiguel-removebg-preview.png" alt="PabloAlbertoFernándezMiguel.jpg">
+                    <img class="full" src="/invitations/graduates/PabloAlbertoFernándezMiguel.jpg" alt="PabloAlbertoFernándezMiguel.jpg">
+                  </div>
+                  <div class="user">
+                    <div class="full">Enfermero Auxiliar</div>
+                    <div class="name">Pablo Alberto</div>
+                    <div class="familyName">Fernández Miguel</div>
+
+                    <div class="full">Regresar</div>
+                  </div>
+                </div><div class="graduateUser">
+                  <div class="avatar">
+                    <img class="preview" src="/invitations/graduates/MayteGuadalupeRamirezOrtega-removebg-preview.png" alt="MayteGuadalupeRamirezOrtega.jpg">
+                    <img class="full" src="/invitations/graduates/MayteGuadalupeRamirezOrtega.jpg" alt="MayteGuadalupeRamirezOrtega.jpg">
+                  </div>
+                  <div class="user">
+                    <div class="full">Enfermera Auxiliar</div>
+                    <div class="name">Mayte Guadalupe</div>
+                    <div class="familyName">Ramirez Ortega</div>
+
+                    <div class="full">Regresar</div>
+                  </div>
+                </div><div class="graduateUser">
+                  <div class="avatar">
+                    <img class="preview" src="/invitations/graduates/ElizabethOrtegaEliosa-removebg-preview.png" alt="ElizabethOrtegaEliosa.jpg">
+                    <img class="full" src="/invitations/graduates/ElizabethOrtegaEliosa.jpg" alt="ElizabethOrtegaEliosa.jpg">
+                  </div>
+                  <div class="user">
+                    <div class="full">Enfermera Auxiliar</div>
+                    <div class="name">Elizabeth</div>
+                    <div class="familyName">Ortega Eliosa</div>
+
+                    <div class="full">Regresar</div>
+                  </div>
+                </div><div class="graduateUser">
+                  <div class="avatar">
+                    <img class="preview" src="/invitations/graduates/MarthaElizabethMorenoVillanueva-removebg-preview.png" alt="MarthaElizabethMorenoVillanueva.jpg">
+                    <img class="full" src="/invitations/graduates/MarthaElizabethMorenoVillanueva.jpg" alt="MarthaElizabethMorenoVillanueva.jpg">
+                  </div>
+                  <div class="user">
+                    <div class="full">Enfermera Auxiliar</div>
+                    <div class="name">Martha Elizabeth</div>
+                    <div class="familyName">Moreno Villanueva</div>
+
+                    <div class="full">Regresar</div>
+                  </div>
+                </div><div class="graduateUser">
+                  <div class="avatar">
+                    <img class="preview" src="/invitations/graduates/FabianaDominguezRobles-removebg-preview.png" alt="FabianaDominguezRobles.jpg">
+                    <img class="full" src="/invitations/graduates/FabianaDominguezRobles.jpg" alt="FabianaDominguezRobles.jpg">
+                  </div>
+                  <div class="user">
+                    <div class="full">Enfermera Auxiliar</div>
+                    <div class="name">Fabiana</div>
+                    <div class="familyName">Dominguez Robles</div>
+
+                    <div class="full">Regresar</div>
+                  </div>
+                </div><div class="graduateUser">
+                  <div class="avatar">
+                    <img class="preview" src="/invitations/graduates/EslyRenataHernandezMartinez-removebg-preview.png" alt="EslyRenataHernandezMartinez.jpg">
+                    <img class="full" src="/invitations/graduates/EslyRenataHernandezMartinez.jpg" alt="EslyRenataHernandezMartinez.jpg">
+                  </div>
+                  <div class="user">
+                    <div class="full">Enfermera Auxiliar</div>
+                    <div class="name">Esly Renata</div>
+                    <div class="familyName">Hernandez Martinez</div>
+
+                    <div class="full">Regresar</div>
+                  </div>
+                </div><div class="graduateUser">
+                  <div class="avatar">
+                    <img class="preview" src="/invitations/graduates/DannaMarielPenaCavala-removebg-preview.png" alt="DannaMarielPenaCavala.jpg">
+                    <img class="full" src="/invitations/graduates/DannaMarielPenaCavala.jpg" alt="DannaMarielPenaCavala.jpg">
+                  </div>
+                  <div class="user">
+                    <div class="full">Enfermera Auxiliar</div>
+                    <div class="name">Danna Mariel</div>
+                    <div class="familyName">Peña Cavala</div>
+
+                    <div class="full">Regresar</div>
+                  </div>
+                </div><div class="graduateUser">
+                  <div class="avatar">
+                    <img class="preview" src="/invitations/graduates/PerlaJuarezGutierrez-removebg-preview.png" alt="PerlaJuarezGutierrez.jpg">
+                    <img class="full" src="/invitations/graduates/PerlaJuarezGutierrez.jpg" alt="PerlaJuarezGutierrez.jpg">
+                  </div>
+                  <div class="user">
+                    <div class="full">Enfermera Auxiliar</div>
+                    <div class="name">Perla</div>
+                    <div class="familyName">Juarez Gutierrez</div>
+
+                    <div class="full">Regresar</div>
+                  </div>
+                </div><div class="graduateUser">
+                  <div class="avatar">
+                    <img class="preview" src="/invitations/graduates/AnaKarenGonzalezGarcia-removebg-preview.png" alt="AnaKarenGonzalezGarcia.jpg">
+                    <img class="full" src="/invitations/graduates/AnaKarenGonzalezGarcia.jpg" alt="AnaKarenGonzalezGarcia.jpg">
+                  </div>
+                  <div class="user">
+                    <div class="full">Enfermera Auxiliar</div>
+                    <div class="name">Ana Karen</div>
+                    <div class="familyName">Gonzalez Garcia</div>
+
+                    <div class="full">Regresar</div>
+                  </div>
+                </div><div class="graduateUser">
+                  <div class="avatar">
+                    <img class="preview" src="/invitations/graduates/BustosCancholaFlorCristina-removebg-preview.png" alt="BustosCancholaFlorCristina.jpg">
+                    <img class="full" src="/invitations/graduates/BustosCancholaFlorCristina.jpg" alt="BustosCancholaFlorCristina.jpg">
+                  </div>
+                  <div class="user">
+                    <div class="full">Enfermera Auxiliar</div>
+                    <div class="name">Bustos Canchola</div>
+                    <div class="familyName">Flor Cristina</div>
+
+                    <div class="full">Regresar</div>
+                  </div>
+                </div><div class="graduateUser">
+                  <div class="avatar">
+                    <img class="preview" src="/invitations/graduates/DaphneFernándezChavez-removebg-preview.png" alt="DaphneFernándezChavez.jpg">
+                    <img class="full" src="/invitations/graduates/DaphneFernándezChavez.jpg" alt="DaphneFernándezChavez.jpg">
+                  </div>
+                  <div class="user">
+                    <div class="full">Enfermera Auxiliar</div>
+                    <div class="name">Daphne</div>
+                    <div class="familyName">Fernández Chávez</div>
+
+                    <div class="full">Regresar</div>
+                  </div>
+                </div><div class="graduateUser">
+                  <div class="avatar">
+                    <img class="preview" src="/invitations/graduates/YahirAlejandroFloresHuerta-removebg-preview.png" alt="YahirAlejandroFloresHuerta.jpg">
+                    <img class="full" src="/invitations/graduates/YahirAlejandroFloresHuerta.jpg" alt="YahirAlejandroFloresHuerta.jpg">
+                  </div>
+                  <div class="user">
+                    <div class="full">Enfermero Auxiliar</div>
+                    <div class="name">Yahir Alejandro</div>
+                    <div class="familyName">Flores Huerta</div>
+
+                    <div class="full">Regresar</div>
+                  </div>
+                </div>
+        </div>
+      </section>
+
+      <section class="graduates-section">
+        <div class="title wow animate__animated bounceInUp">
+          <b>Honorables Graduados</b>
+        </div>
+
+        <div class="box">
+          <div style="--i:1;" class="item">
+                  <img src="/invitations/graduates/AnaAliciaManguilarDelAngel.jpg" alt="AnaAliciaManguilarDelAngel.jpg">
+                </div><div style="--i:2;" class="item">
+                  <img src="/invitations/graduates/ArgeliaLorenaTaveraSanchez.jpg" alt="ArgeliaLorenaTaveraSanchez.jpg">
+                </div><div style="--i:3;" class="item">
+                  <img src="/invitations/graduates/KasandraRiveraCortes.jpg" alt="KasandraRiveraCortes.jpg">
+                </div><div style="--i:4;" class="item">
+                  <img src="/invitations/graduates/JudithCitlaliRuizRocha.jpg" alt="JudithCitlaliRuizRocha.jpg">
+                </div><div style="--i:5;" class="item">
+                  <img src="/invitations/graduates/KarenNeyraVillegas.jpg" alt="KarenNeyraVillegas.jpg">
+                </div><div style="--i:6;" class="item">
+                  <img src="/invitations/graduates/TeresaZaragozaLuna.jpg" alt="TeresaZaragozaLuna.jpg">
+                </div><div style="--i:7;" class="item">
+                  <img src="/invitations/graduates/MaríadelRosarioCalvaCruz.jpg" alt="MaríadelRosarioCalvaCruz.jpg">
+                </div><div style="--i:8;" class="item">
+                  <img src="/invitations/graduates/PabloAlbertoFernándezMiguel.jpg" alt="PabloAlbertoFernándezMiguel.jpg">
+                </div><div style="--i:11;" class="item">
+                  <img src="/invitations/graduates/MayteGuadalupeRamirezOrtega.jpg" alt="MayteGuadalupeRamirezOrtega.jpg">
+                </div><div style="--i:12;" class="item">
+                  <img src="/invitations/graduates/ElizabethOrtegaEliosa.jpg" alt="ElizabethOrtegaEliosa.jpg">
+                </div><div style="--i:13;" class="item">
+                  <img src="/invitations/graduates/MarthaElizabethMorenoVillanueva.jpg" alt="MarthaElizabethMorenoVillanueva.jpg">
+                </div><div style="--i:14;" class="item">
+                  <img src="/invitations/graduates/FabianaDominguezRobles.jpg" alt="FabianaDominguezRobles.jpg">
+                </div><div style="--i:15;" class="item">
+                  <img src="/invitations/graduates/EslyRenataHernandezMartinez.jpg" alt="EslyRenataHernandezMartinez.jpg">
+                </div><div style="--i:16;" class="item">
+                  <img src="/invitations/graduates/DannaMarielPenaCavala.jpg" alt="DannaMarielPenaCavala.jpg">
+                </div><div style="--i:17;" class="item">
+                  <img src="/invitations/graduates/PerlaJuarezGutierrez.jpg" alt="PerlaJuarezGutierrez.jpg">
+                </div><div style="--i:18;" class="item">
+                  <img src="/invitations/graduates/AnaKarenGonzalezGarcia.jpg" alt="AnaKarenGonzalezGarcia.jpg">
+                </div><div style="--i:19;" class="item">
+                  <img src="/invitations/graduates/BustosCancholaFlorCristina.jpg" alt="BustosCancholaFlorCristina.jpg">
+                </div><div style="--i:20;" class="item">
+                  <img src="/invitations/graduates/DaphneFernándezChavez.jpg" alt="DaphneFernándezChavez.jpg">
+                </div><div style="--i:21;" class="item">
+                  <img src="/invitations/graduates/YahirAlejandroFloresHuerta.jpg" alt="YahirAlejandroFloresHuerta.jpg">
+                </div>
+        </div>
+      </section>
+
+      <section class="sponsors-section">
+        <div class="title wow animate__animated bounceInUp">
+          <b>Comité Ejecutivo</b>
+        </div>
+
+        <div class="agent wow animate__animated bounceInUp">
+          Directora DIF Nezahualcóyotl
+          <div class="accent">Claudia Mónica Pérez Cerqueda</div>
+        </div>
+
+        <div class="agent wow animate__animated bounceInUp">
+          Subdirector
+          <div class="accent">Andrés Roberto Noguez Morales</div>
+        </div>
+
+        <div class="agent wow animate__animated bounceInUp">
+          Coordinador
+          <div class="accent">Miguel Ángel Córdova Velázquez</div>
+        </div>
+
+        <div class="agent wow animate__animated bounceInUp">
+          Profesora
+          <div class="accent">Monserrat Hernández García</div>
+        </div>
+      </section>
+
+      <section class="final-section">
+        <div class="congratulations wow animate__animated bounceInUp">
+          <div class="birrete">
+            <img src="/invitations/img/birrete.svg" alt="">
+          </div>
+ 
+          Felicidades a los Graduados!!
+        </div>
+      </section>
     </div>
   </div>
-
-
 
   
 
 	</body></html>
+
+
+
+<!--  -->

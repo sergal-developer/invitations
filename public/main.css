@@ -504,6 +504,9 @@ img {
   width: 100%;
   font-family: "Josefin Sans", sans-serif;
 }
+.app-page.graduation .playerButton {
+  padding: 10px;
+}
 .app-page.graduation .control-audio {
   position: fixed;
   width: 40px;
@@ -1438,7 +1441,6 @@ h1, h2, h3, h4, h5, h6 {
 p {
   margin: 1em 0;
 }
-
 @charset "UTF-8";
 /**
  * @description
@@ -1505,6 +1507,10 @@ p {
   font-family: "Open Sans", sans-serif;
   width: 100%;
   font-family: "Josefin Sans", sans-serif;
+}
+
+.playerButton {
+  padding: 10px;
 }
 
 .control-audio {
@@ -2052,6 +2058,9 @@ img {
   font-family: "Open Sans", sans-serif;
   width: 100%;
   font-family: "Josefin Sans", sans-serif;
+}
+.app-page.graduation .playerButton {
+  padding: 10px;
 }
 .app-page.graduation .control-audio {
   position: fixed;

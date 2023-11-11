@@ -4,6 +4,8 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css");
 @import url("https://fonts.googleapis.com/css2?family=Inconsolata&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Josefin+Sans:wght@300;400;500;600;700&family=Marck+Script&family=Mrs+Saint+Delafield&family=Niconne&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lilita+One&family=Pacifico&family=Patua+One&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css");
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, menu, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -216,6 +218,22 @@ mark {
   font-family: "Niconne", cursive;
 }
 
+.bebasNeue {
+  font-family: "Bebas Neue", sans-serif;
+}
+
+.lilitaOne {
+  font-family: "Lilita One", sans-serif;
+}
+
+.pacifico {
+  font-family: "Pacifico", cursive;
+}
+
+.patuaOne {
+  font-family: "Patua One", serif;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -410,9 +428,7 @@ img {
   font-family: "Open Sans", sans-serif;
 }
 .app-page.graduation {
-  background: black;
   color: white;
-  font-family: "Oswald", sans-serif;
   overflow-x: hidden;
   font-size: 1rem;
   display: flex;
@@ -468,6 +484,17 @@ img {
 .app-page.graduation :root {
   --numGraduates: 2;
 }
+.app-page.graduation .app-page {
+  background: url("/invitations/img/pattern.svg") repeat 10% 10% fixed;
+  background-size: 10%;
+}
+.app-page.graduation .app-page .school {
+  font-family: "Bebas Neue", sans-serif;
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 30px;
+}
 .app-page.graduation .body-content {
   display: flex;
   align-items: center;
@@ -475,9 +502,13 @@ img {
   flex-direction: column;
   font-family: "Open Sans", sans-serif;
   width: 100%;
+  font-family: "Josefin Sans", sans-serif;
+}
+.app-page.graduation .playerButton {
+  padding: 10px;
 }
 .app-page.graduation .control-audio {
-  position: absolute;
+  position: fixed;
   width: 40px;
   height: 40px;
   right: 20px;
@@ -492,14 +523,11 @@ img {
   top: 10px;
   left: 10px;
 }
+.app-page.graduation .poem {
+  text-align: center;
+}
 .app-page.graduation .accent {
   color: #EBCD55;
-}
-.app-page.graduation .school {
-  width: 100%;
-  text-align: center;
-  font-size: 2rem;
-  margin-top: 30px;
 }
 .app-page.graduation .image-lamp {
   width: 100%;
@@ -508,6 +536,7 @@ img {
 .app-page.graduation .title {
   font-size: 1.5rem;
   margin: 20px 0;
+  text-align: center;
 }
 .app-page.graduation .title-ceremony {
   font-size: 4rem;
@@ -550,13 +579,13 @@ img {
   border-bottom: 0;
   padding: 0 10px;
 }
-.app-page.graduation .graduates {
+.app-page.graduation .graduatesss {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   margin-bottom: 100px;
 }
-.app-page.graduation .graduates div {
+.app-page.graduation .graduatesss div {
   font-size: 1.8rem;
   padding: 10px 15px;
   color: #EBCD55;
@@ -565,15 +594,15 @@ img {
   transition: all 300ms;
   position: relative;
 }
-.app-page.graduation .graduates div span {
+.app-page.graduation .graduatesss div span {
   display: block;
   color: #dec255;
 }
-.app-page.graduation .graduates div:hover {
+.app-page.graduation .graduatesss div:hover {
   text-shadow: 0 0 20px #EBCD55, 0 0 20px #EBCD55, 0 0 20px #EBCD55;
   cursor: pointer;
 }
-.app-page.graduation .graduates div:after {
+.app-page.graduation .graduatesss div:after {
   content: "•";
   font-size: 2rem;
   line-height: 50px;
@@ -591,7 +620,6 @@ img {
   font-size: 3rem;
   margin: 150px 0;
   text-align: center;
-  font-family: "Great Vibes", cursive;
 }
 .app-page.graduation .congratulations .birrete {
   width: 100%;
@@ -627,6 +655,142 @@ img {
 .app-page.graduation .box .item .names {
   font-size: 1rem;
   text-align: center;
+}
+.app-page.graduation .graduates {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-bottom: 100px;
+}
+.app-page.graduation .graduateUser {
+  width: 50%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-family: "Josefin Sans", sans-serif;
+  transition: all 300ms;
+}
+.app-page.graduation .graduateUser .avatar {
+  width: 120px;
+  border-radius: 50%;
+  height: 120px;
+  background: rgba(255, 255, 255, 0.2);
+  position: relative;
+  transition: all 300ms;
+}
+.app-page.graduation .graduateUser .avatar img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  transition: all 300ms;
+}
+.app-page.graduation .graduateUser .avatar img.full {
+  width: 100%;
+  height: auto;
+}
+.app-page.graduation .graduateUser .avatar .full {
+  display: none;
+}
+.app-page.graduation .graduateUser .avatar .preview {
+  display: inline-block;
+}
+.app-page.graduation .graduateUser .user {
+  font-size: 100%;
+}
+.app-page.graduation .graduateUser .user .name {
+  font-size: 80%;
+  color: black;
+}
+.app-page.graduation .graduateUser .user .familyName {
+  font-size: 70%;
+  font-weight: bold;
+  color: white;
+}
+.app-page.graduation .graduateUser .user .full {
+  display: none;
+  color: #EBCD55;
+}
+.app-page.graduation .graduateUser .user .preview {
+  display: inline-block;
+}
+.app-page.graduation .graduateUser.show {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  background: #777070;
+}
+.app-page.graduation .graduateUser.show .avatar {
+  width: 80%;
+  border-radius: 0;
+  height: 60%;
+  text-align: center;
+  background: rgba(255, 255, 255, 0);
+}
+.app-page.graduation .graduateUser.show .avatar .full {
+  display: inline-block;
+}
+.app-page.graduation .graduateUser.show .avatar .preview {
+  display: none;
+}
+.app-page.graduation .graduateUser.show .user {
+  font-size: 200%;
+}
+.app-page.graduation .graduateUser.show .user .full {
+  display: inline-block;
+}
+.app-page.graduation .graduateUser.show .user .preview {
+  display: none;
+}
+.app-page.graduation .animated-div {
+  width: 100px;
+  height: 100px;
+  background-color: #3498db;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  transform: translate(-50%, -50%);
+  transition: transform 300s ease;
+  z-index: 10;
+}
+.app-page.graduation .countdown {
+  color: white;
+  margin: 0 auto;
+  text-align: center;
+}
+.app-page.graduation .countdown .title {
+  font-weight: normal;
+  text-transform: uppercase;
+}
+.app-page.graduation .countdown ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+.app-page.graduation .countdown li {
+  display: inline-block;
+  font-size: 80%;
+  list-style-type: none;
+  padding: 10px;
+  text-transform: uppercase;
+}
+.app-page.graduation .countdown li span {
+  display: block;
+  font-size: 2.5rem;
 }
 
 img {
@@ -716,6 +880,22 @@ p {
 
 .niconne {
   font-family: "Niconne", cursive;
+}
+
+.bebasNeue {
+  font-family: "Bebas Neue", sans-serif;
+}
+
+.lilitaOne {
+  font-family: "Lilita One", sans-serif;
+}
+
+.pacifico {
+  font-family: "Pacifico", cursive;
+}
+
+.patuaOne {
+  font-family: "Patua One", serif;
 }
 
 .page-frame {
@@ -1232,6 +1412,22 @@ p {
   font-family: "Niconne", cursive;
 }
 
+.bebasNeue {
+  font-family: "Bebas Neue", sans-serif;
+}
+
+.lilitaOne {
+  font-family: "Lilita One", sans-serif;
+}
+
+.pacifico {
+  font-family: "Pacifico", cursive;
+}
+
+.patuaOne {
+  font-family: "Patua One", serif;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -1245,7 +1441,6 @@ h1, h2, h3, h4, h5, h6 {
 p {
   margin: 1em 0;
 }
-
 @charset "UTF-8";
 /**
  * @description
@@ -1292,6 +1487,18 @@ p {
   --numGraduates: 2;
 }
 
+.app-page {
+  background: url("/invitations/img/pattern.svg") repeat 10% 10% fixed;
+  background-size: 10%;
+}
+.app-page .school {
+  font-family: "Bebas Neue", sans-serif;
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 30px;
+}
+
 .body-content {
   display: flex;
   align-items: center;
@@ -1299,10 +1506,15 @@ p {
   flex-direction: column;
   font-family: "Open Sans", sans-serif;
   width: 100%;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.playerButton {
+  padding: 10px;
 }
 
 .control-audio {
-  position: absolute;
+  position: fixed;
   width: 40px;
   height: 40px;
   right: 20px;
@@ -1319,15 +1531,12 @@ p {
   left: 10px;
 }
 
-.accent {
-  color: #EBCD55;
+.poem {
+  text-align: center;
 }
 
-.school {
-  width: 100%;
-  text-align: center;
-  font-size: 2rem;
-  margin-top: 30px;
+.accent {
+  color: #EBCD55;
 }
 
 .image-lamp {
@@ -1338,6 +1547,7 @@ p {
 .title {
   font-size: 1.5rem;
   margin: 20px 0;
+  text-align: center;
 }
 
 .title-ceremony {
@@ -1383,13 +1593,13 @@ p {
   border-bottom: 0;
   padding: 0 10px;
 }
-.graduates {
+.graduatesss {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   margin-bottom: 100px;
 }
-.graduates div {
+.graduatesss div {
   font-size: 1.8rem;
   padding: 10px 15px;
   color: #EBCD55;
@@ -1398,15 +1608,15 @@ p {
   transition: all 300ms;
   position: relative;
 }
-.graduates div span {
+.graduatesss div span {
   display: block;
   color: #dec255;
 }
-.graduates div:hover {
+.graduatesss div:hover {
   text-shadow: 0 0 20px #EBCD55, 0 0 20px #EBCD55, 0 0 20px #EBCD55;
   cursor: pointer;
 }
-.graduates div:after {
+.graduatesss div:after {
   content: "•";
   font-size: 2rem;
   line-height: 50px;
@@ -1426,7 +1636,6 @@ p {
   font-size: 3rem;
   margin: 150px 0;
   text-align: center;
-  font-family: "Great Vibes", cursive;
 }
 .congratulations .birrete {
   width: 100%;
@@ -1463,6 +1672,146 @@ p {
 .box .item .names {
   font-size: 1rem;
   text-align: center;
+}
+
+.graduates {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-bottom: 100px;
+}
+
+.graduateUser {
+  width: 50%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-family: "Josefin Sans", sans-serif;
+  transition: all 300ms;
+}
+.graduateUser .avatar {
+  width: 120px;
+  border-radius: 50%;
+  height: 120px;
+  background: rgba(255, 255, 255, 0.2);
+  position: relative;
+  transition: all 300ms;
+}
+.graduateUser .avatar img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  transition: all 300ms;
+}
+.graduateUser .avatar img.full {
+  width: 100%;
+  height: auto;
+}
+.graduateUser .avatar .full {
+  display: none;
+}
+.graduateUser .avatar .preview {
+  display: inline-block;
+}
+.graduateUser .user {
+  font-size: 100%;
+}
+.graduateUser .user .name {
+  font-size: 80%;
+  color: black;
+}
+.graduateUser .user .familyName {
+  font-size: 70%;
+  font-weight: bold;
+  color: white;
+}
+.graduateUser .user .full {
+  display: none;
+  color: #EBCD55;
+}
+.graduateUser .user .preview {
+  display: inline-block;
+}
+.graduateUser.show {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  background: #777070;
+}
+.graduateUser.show .avatar {
+  width: 80%;
+  border-radius: 0;
+  height: 60%;
+  text-align: center;
+  background: rgba(255, 255, 255, 0);
+}
+.graduateUser.show .avatar .full {
+  display: inline-block;
+}
+.graduateUser.show .avatar .preview {
+  display: none;
+}
+.graduateUser.show .user {
+  font-size: 200%;
+}
+.graduateUser.show .user .full {
+  display: inline-block;
+}
+.graduateUser.show .user .preview {
+  display: none;
+}
+
+.animated-div {
+  width: 100px;
+  height: 100px;
+  background-color: #3498db;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  transform: translate(-50%, -50%);
+  transition: transform 300s ease;
+  z-index: 10;
+}
+
+.countdown {
+  color: white;
+  margin: 0 auto;
+  text-align: center;
+}
+.countdown .title {
+  font-weight: normal;
+  text-transform: uppercase;
+}
+.countdown ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+.countdown li {
+  display: inline-block;
+  font-size: 80%;
+  list-style-type: none;
+  padding: 10px;
+  text-transform: uppercase;
+}
+.countdown li span {
+  display: block;
+  font-size: 2.5rem;
 }
 /**
  * @description
@@ -1634,9 +1983,7 @@ img {
   font-family: "Open Sans", sans-serif;
 }
 .app-page.graduation {
-  background: black;
   color: white;
-  font-family: "Oswald", sans-serif;
   overflow-x: hidden;
   font-size: 1rem;
   display: flex;
@@ -1692,6 +2039,17 @@ img {
 .app-page.graduation :root {
   --numGraduates: 2;
 }
+.app-page.graduation .app-page {
+  background: url("/invitations/img/pattern.svg") repeat 10% 10% fixed;
+  background-size: 10%;
+}
+.app-page.graduation .app-page .school {
+  font-family: "Bebas Neue", sans-serif;
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 30px;
+}
 .app-page.graduation .body-content {
   display: flex;
   align-items: center;
@@ -1699,9 +2057,13 @@ img {
   flex-direction: column;
   font-family: "Open Sans", sans-serif;
   width: 100%;
+  font-family: "Josefin Sans", sans-serif;
+}
+.app-page.graduation .playerButton {
+  padding: 10px;
 }
 .app-page.graduation .control-audio {
-  position: absolute;
+  position: fixed;
   width: 40px;
   height: 40px;
   right: 20px;
@@ -1716,14 +2078,11 @@ img {
   top: 10px;
   left: 10px;
 }
+.app-page.graduation .poem {
+  text-align: center;
+}
 .app-page.graduation .accent {
   color: #EBCD55;
-}
-.app-page.graduation .school {
-  width: 100%;
-  text-align: center;
-  font-size: 2rem;
-  margin-top: 30px;
 }
 .app-page.graduation .image-lamp {
   width: 100%;
@@ -1732,6 +2091,7 @@ img {
 .app-page.graduation .title {
   font-size: 1.5rem;
   margin: 20px 0;
+  text-align: center;
 }
 .app-page.graduation .title-ceremony {
   font-size: 4rem;
@@ -1774,13 +2134,13 @@ img {
   border-bottom: 0;
   padding: 0 10px;
 }
-.app-page.graduation .graduates {
+.app-page.graduation .graduatesss {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   margin-bottom: 100px;
 }
-.app-page.graduation .graduates div {
+.app-page.graduation .graduatesss div {
   font-size: 1.8rem;
   padding: 10px 15px;
   color: #EBCD55;
@@ -1789,15 +2149,15 @@ img {
   transition: all 300ms;
   position: relative;
 }
-.app-page.graduation .graduates div span {
+.app-page.graduation .graduatesss div span {
   display: block;
   color: #dec255;
 }
-.app-page.graduation .graduates div:hover {
+.app-page.graduation .graduatesss div:hover {
   text-shadow: 0 0 20px #EBCD55, 0 0 20px #EBCD55, 0 0 20px #EBCD55;
   cursor: pointer;
 }
-.app-page.graduation .graduates div:after {
+.app-page.graduation .graduatesss div:after {
   content: "•";
   font-size: 2rem;
   line-height: 50px;
@@ -1815,7 +2175,6 @@ img {
   font-size: 3rem;
   margin: 150px 0;
   text-align: center;
-  font-family: "Great Vibes", cursive;
 }
 .app-page.graduation .congratulations .birrete {
   width: 100%;
@@ -1851,6 +2210,142 @@ img {
 .app-page.graduation .box .item .names {
   font-size: 1rem;
   text-align: center;
+}
+.app-page.graduation .graduates {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-bottom: 100px;
+}
+.app-page.graduation .graduateUser {
+  width: 50%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-family: "Josefin Sans", sans-serif;
+  transition: all 300ms;
+}
+.app-page.graduation .graduateUser .avatar {
+  width: 120px;
+  border-radius: 50%;
+  height: 120px;
+  background: rgba(255, 255, 255, 0.2);
+  position: relative;
+  transition: all 300ms;
+}
+.app-page.graduation .graduateUser .avatar img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  transition: all 300ms;
+}
+.app-page.graduation .graduateUser .avatar img.full {
+  width: 100%;
+  height: auto;
+}
+.app-page.graduation .graduateUser .avatar .full {
+  display: none;
+}
+.app-page.graduation .graduateUser .avatar .preview {
+  display: inline-block;
+}
+.app-page.graduation .graduateUser .user {
+  font-size: 100%;
+}
+.app-page.graduation .graduateUser .user .name {
+  font-size: 80%;
+  color: black;
+}
+.app-page.graduation .graduateUser .user .familyName {
+  font-size: 70%;
+  font-weight: bold;
+  color: white;
+}
+.app-page.graduation .graduateUser .user .full {
+  display: none;
+  color: #EBCD55;
+}
+.app-page.graduation .graduateUser .user .preview {
+  display: inline-block;
+}
+.app-page.graduation .graduateUser.show {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  background: #777070;
+}
+.app-page.graduation .graduateUser.show .avatar {
+  width: 80%;
+  border-radius: 0;
+  height: 60%;
+  text-align: center;
+  background: rgba(255, 255, 255, 0);
+}
+.app-page.graduation .graduateUser.show .avatar .full {
+  display: inline-block;
+}
+.app-page.graduation .graduateUser.show .avatar .preview {
+  display: none;
+}
+.app-page.graduation .graduateUser.show .user {
+  font-size: 200%;
+}
+.app-page.graduation .graduateUser.show .user .full {
+  display: inline-block;
+}
+.app-page.graduation .graduateUser.show .user .preview {
+  display: none;
+}
+.app-page.graduation .animated-div {
+  width: 100px;
+  height: 100px;
+  background-color: #3498db;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  transform: translate(-50%, -50%);
+  transition: transform 300s ease;
+  z-index: 10;
+}
+.app-page.graduation .countdown {
+  color: white;
+  margin: 0 auto;
+  text-align: center;
+}
+.app-page.graduation .countdown .title {
+  font-weight: normal;
+  text-transform: uppercase;
+}
+.app-page.graduation .countdown ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+.app-page.graduation .countdown li {
+  display: inline-block;
+  font-size: 80%;
+  list-style-type: none;
+  padding: 10px;
+  text-transform: uppercase;
+}
+.app-page.graduation .countdown li span {
+  display: block;
+  font-size: 2.5rem;
 }
 
 img {
