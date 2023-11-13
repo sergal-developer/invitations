@@ -14,14 +14,13 @@
 
 		
 		<title>Invitations</title>
-	<link rel="stylesheet" href="/invitations/main.css" /><script type="module">const f=document.querySelector(".box"),l=document.querySelectorAll(".box .item");document.documentElement.style.setProperty("--numGraduates",`${l.length}`);getComputedStyle(document.documentElement).getPropertyValue("--numGraduates");let c=0,p=360/l.length;setInterval(()=>{c>360&&(c=0),f.style.transform=`perspective(1000px) rotateY(${c}deg)`,c=c+p},1e3);const S=document.querySelectorAll(".graduates .graduateUser");S.forEach(e=>{e.addEventListener("click",()=>{e.classList.contains("show")?e.classList.remove("show"):e.classList.add("show")})});const v=document.querySelector(".control-audio");v.addEventListener("click",()=>{const e=u("#audio-background"),t=document.querySelector(".control-audio img");e?t.setAttribute("src","/invitations/img/volume.svg"):t.setAttribute("src","/invitations/img/mute.svg")});const E=document.getElementById("toggleButton");E.addEventListener("click",()=>{u("#myAudio")});window.addEventListener("scroll",function(){const e=x();console.log("scrollPercentage: ",e)});function u(e){const t=document.querySelector(e);return t.paused?t.play():t.pause(),t.paused}function w(){let o=new Date,d=String(o.getDate()).padStart(2,"0"),i=String(o.getMonth()+1).padStart(2,"0"),s=o.getFullYear(),a=s,m="12/16/",r="12/16/2023";o=i+"/"+d+"/"+s,o>r&&(r=m+a);const g=new Date(r).getTime(),y=setInterval(()=>{const h=new Date().getTime(),n=g-h;document.getElementById("days").innerText=String(Math.floor(n/864e5)),document.getElementById("hours").innerText=String(Math.floor(n%864e5/36e5)),document.getElementById("minutes").innerText=String(Math.floor(n%36e5/6e4)),document.getElementById("seconds").innerText=String(Math.floor(n%6e4/1e3)),n<0&&(console.log("distance: ",n),clearInterval(y))},0)}function x(){return Math.round((document.documentElement.scrollTop+window.innerHeight)/document.documentElement.scrollHeight*100)}w();
-</script></head>
+	<link rel="stylesheet" href="/invitations/main.css" /><script type="module" src="/invitations/_astro/hoisted.2618cc6f.js"></script></head>
 	<body class="astro-HSP6OTUF">
 		
   
   <div class="control-audio">
     <img src="/invitations/img/volume.svg" alt="">
-    <audio id="audio-background" src="/invitations/data/emotional-cinematic.mp3" autoplay loop></audio>
+    <audio id="audio-background" src="/invitations/data/marcha-bg.mp3" loop></audio>
   </div>
 
   <div class="app-page graduation">
@@ -469,7 +468,3 @@
   </div>
 
 	</body></html>
-
-
-
-<!--  -->

@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "astro dev --config astro.config.mjs",
-    "start": "gulp build && astro dev --config astro.config.mjs",
+    "start": "gulp build && astro dev --config astro.config.mjs --host",
     "start-dev": "gulp dev && astro dev --config astro.config.mjs",
     "build": "gulp build && astro build --config astro.config.mjs && gulp prepare-deploy",
     "preview": "astro preview",
