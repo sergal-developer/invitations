@@ -66,10 +66,10 @@ export class Graduation {
             }
         });
 
-        setTimeout(() => {
-            this._playPause("#audio-background");
-            console.log('activate sound')
-        }, 3000);
+        // setTimeout(() => {
+        //     this._playPause("#audio-background");
+        //     console.log('activate sound')
+        // }, 000);
 
         const toggleButton = document.getElementById("toggleButton");
         toggleButton.addEventListener("click", () => {
@@ -78,9 +78,16 @@ export class Graduation {
     }
 
     setupScrollActions() {
+        const florenceImage = document.querySelector('#florence-img');
         window.addEventListener("scroll", () => {
             const scrollPercentage = this._getPercentScroll();
             console.log("scrollPercentage: ", scrollPercentage);
+
+            if(scrollPercentage > 29 && scrollPercentage < 45) {
+              florenceImage.classList.add('florence-img-scroll');
+              florenceImage.setAttribute('stryle', ``);
+
+            }
         
             // Aplica la rotación en el eje Y basada en el porcentaje de desplazamiento
             // animatedDiv.style.transform = `translate(-50%, -50%) rotateX(${scrollPercentage * 10}deg)`;
