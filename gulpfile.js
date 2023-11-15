@@ -59,7 +59,7 @@ gulp.task('update-references-css', () => {
 
 gulp.task('update-references-js', () => {
   return gulp.src('./docs/**/*.html', {base: './'})
-    .pipe(replace(/\/invitations\/_astro\/"/g, '/invitations/styles/"'))
+    .pipe(replace('/invitations/_astro/', '/invitations/styles/'))
     .pipe(gulp.dest('./'));
 });
 

@@ -540,6 +540,14 @@ img {
   width: 100%;
   margin: 35px auto 50px;
 }
+@media (min-width: 0px) and (max-width: 767px) and (max-height: 390px) {
+  .app-page.graduation section .image-lamp {
+    text-align: center;
+  }
+  .app-page.graduation section .image-lamp img {
+    width: 50%;
+  }
+}
 .app-page.graduation section .title {
   font-size: 1.5rem;
   margin: 20px 0;
@@ -553,6 +561,13 @@ img {
 }
 .app-page.graduation section .title-ceremony span {
   margin-left: 15%;
+}
+@media (min-width: 0px) and (max-width: 767px) and (max-height: 390px) {
+  .app-page.graduation .invitation-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .app-page.graduation .invitation-section .school {
   font-family: "Bebas Neue", sans-serif;
@@ -623,6 +638,18 @@ img {
   display: block;
   font-size: 2.5rem;
 }
+@media (min-width: 0px) and (max-width: 767px) and (max-height: 390px) {
+  .app-page.graduation .countdown-section .title {
+    font-size: 2rem;
+  }
+  .app-page.graduation .countdown-section li {
+    font-size: 80%;
+    padding: 20px;
+  }
+  .app-page.graduation .countdown-section li span {
+    font-size: 5rem;
+  }
+}
 .app-page.graduation .poem-section .title {
   margin-bottom: 260px;
 }
@@ -649,6 +676,17 @@ img {
 .app-page.graduation .poem-section .poem-content {
   z-index: 1;
   position: relative;
+}
+@media (min-width: 0px) and (max-width: 767px) and (max-height: 390px) {
+  .app-page.graduation .poem-section #florence-img {
+    top: 80px;
+    width: 35%;
+  }
+  .app-page.graduation .poem-section .florence-img-scroll {
+    top: 0 !important;
+    width: 50% !important;
+    left: 60% !important;
+  }
 }
 .app-page.graduation .graduates-section .graduates {
   display: flex;
@@ -768,6 +806,29 @@ img {
 .app-page.graduation .graduates-section .graduateUser.show .user .preview {
   display: none;
 }
+@media (min-width: 0px) and (max-width: 767px) and (max-height: 390px) {
+  .app-page.graduation .graduates-section .graduateUser.show {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .app-page.graduation .graduates-section .graduateUser.show .avatar {
+    width: 50%;
+    height: 100%;
+  }
+  .app-page.graduation .graduates-section .graduateUser.show .avatar img {
+    width: 100%;
+  }
+  .app-page.graduation .graduates-section .graduateUser.show .user {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
 @keyframes reveal {
   0% {
     left: -100%;
@@ -823,6 +884,14 @@ img {
 .app-page.graduation .gallery-section .box .item img {
   width: 100%;
 }
+@media (min-width: 0px) and (max-width: 767px) and (max-height: 390px) {
+  .app-page.graduation .gallery-section .box {
+    margin-left: 38%;
+  }
+}
+.app-page.graduation .sponsors-section {
+  padding-bottom: 200px;
+}
 .app-page.graduation .sponsors-section .agent {
   font-size: 1.5rem;
   width: 100%;
@@ -835,6 +904,11 @@ img {
 }
 .app-page.graduation .sponsors-section .agent .name span {
   font-weight: bold;
+}
+@media (min-width: 0px) and (max-width: 767px) and (max-height: 390px) {
+  .app-page.graduation .sponsors-section .agent .name {
+    font-size: 2.4rem;
+  }
 }
 .app-page.graduation .animated-div {
   width: 100px;
@@ -885,7 +959,6 @@ img {
 p {
   margin-bottom: 30px;
 }
-
 /**
  * @description
  * Generate scroll into container 
@@ -1632,6 +1705,14 @@ section .image-lamp {
   width: 100%;
   margin: 35px auto 50px;
 }
+@media (min-width: 0px) and (max-width: 767px) and (max-height: 390px) {
+  section .image-lamp {
+    text-align: center;
+  }
+  section .image-lamp img {
+    width: 50%;
+  }
+}
 section .title {
   font-size: 1.5rem;
   margin: 20px 0;
@@ -1647,6 +1728,13 @@ section .title-ceremony span {
   margin-left: 15%;
 }
 
+@media (min-width: 0px) and (max-width: 767px) and (max-height: 390px) {
+  .invitation-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .invitation-section .school {
   font-family: "Bebas Neue", sans-serif;
   width: 100%;
@@ -1717,6 +1805,18 @@ section .title-ceremony span {
   display: block;
   font-size: 2.5rem;
 }
+@media (min-width: 0px) and (max-width: 767px) and (max-height: 390px) {
+  .countdown-section .title {
+    font-size: 2rem;
+  }
+  .countdown-section li {
+    font-size: 80%;
+    padding: 20px;
+  }
+  .countdown-section li span {
+    font-size: 5rem;
+  }
+}
 
 .poem-section .title {
   margin-bottom: 260px;
@@ -1744,6 +1844,17 @@ section .title-ceremony span {
 .poem-section .poem-content {
   z-index: 1;
   position: relative;
+}
+@media (min-width: 0px) and (max-width: 767px) and (max-height: 390px) {
+  .poem-section #florence-img {
+    top: 80px;
+    width: 35%;
+  }
+  .poem-section .florence-img-scroll {
+    top: 0 !important;
+    width: 50% !important;
+    left: 60% !important;
+  }
 }
 
 .graduates-section .graduates {
@@ -1864,6 +1975,29 @@ section .title-ceremony span {
 .graduates-section .graduateUser.show .user .preview {
   display: none;
 }
+@media (min-width: 0px) and (max-width: 767px) and (max-height: 390px) {
+  .graduates-section .graduateUser.show {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .graduates-section .graduateUser.show .avatar {
+    width: 50%;
+    height: 100%;
+  }
+  .graduates-section .graduateUser.show .avatar img {
+    width: 100%;
+  }
+  .graduates-section .graduateUser.show .user {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
 
 @keyframes reveal {
   0% {
@@ -1920,7 +2054,15 @@ section .title-ceremony span {
 .gallery-section .box .item img {
   width: 100%;
 }
+@media (min-width: 0px) and (max-width: 767px) and (max-height: 390px) {
+  .gallery-section .box {
+    margin-left: 38%;
+  }
+}
 
+.sponsors-section {
+  padding-bottom: 200px;
+}
 .sponsors-section .agent {
   font-size: 1.5rem;
   width: 100%;
@@ -1933,6 +2075,11 @@ section .title-ceremony span {
 }
 .sponsors-section .agent .name span {
   font-weight: bold;
+}
+@media (min-width: 0px) and (max-width: 767px) and (max-height: 390px) {
+  .sponsors-section .agent .name {
+    font-size: 2.4rem;
+  }
 }
 
 .animated-div {
@@ -2261,6 +2408,14 @@ img {
   width: 100%;
   margin: 35px auto 50px;
 }
+@media (min-width: 0px) and (max-width: 767px) and (max-height: 390px) {
+  .app-page.graduation section .image-lamp {
+    text-align: center;
+  }
+  .app-page.graduation section .image-lamp img {
+    width: 50%;
+  }
+}
 .app-page.graduation section .title {
   font-size: 1.5rem;
   margin: 20px 0;
@@ -2274,6 +2429,13 @@ img {
 }
 .app-page.graduation section .title-ceremony span {
   margin-left: 15%;
+}
+@media (min-width: 0px) and (max-width: 767px) and (max-height: 390px) {
+  .app-page.graduation .invitation-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .app-page.graduation .invitation-section .school {
   font-family: "Bebas Neue", sans-serif;
@@ -2344,6 +2506,18 @@ img {
   display: block;
   font-size: 2.5rem;
 }
+@media (min-width: 0px) and (max-width: 767px) and (max-height: 390px) {
+  .app-page.graduation .countdown-section .title {
+    font-size: 2rem;
+  }
+  .app-page.graduation .countdown-section li {
+    font-size: 80%;
+    padding: 20px;
+  }
+  .app-page.graduation .countdown-section li span {
+    font-size: 5rem;
+  }
+}
 .app-page.graduation .poem-section .title {
   margin-bottom: 260px;
 }
@@ -2370,6 +2544,17 @@ img {
 .app-page.graduation .poem-section .poem-content {
   z-index: 1;
   position: relative;
+}
+@media (min-width: 0px) and (max-width: 767px) and (max-height: 390px) {
+  .app-page.graduation .poem-section #florence-img {
+    top: 80px;
+    width: 35%;
+  }
+  .app-page.graduation .poem-section .florence-img-scroll {
+    top: 0 !important;
+    width: 50% !important;
+    left: 60% !important;
+  }
 }
 .app-page.graduation .graduates-section .graduates {
   display: flex;
@@ -2489,6 +2674,29 @@ img {
 .app-page.graduation .graduates-section .graduateUser.show .user .preview {
   display: none;
 }
+@media (min-width: 0px) and (max-width: 767px) and (max-height: 390px) {
+  .app-page.graduation .graduates-section .graduateUser.show {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .app-page.graduation .graduates-section .graduateUser.show .avatar {
+    width: 50%;
+    height: 100%;
+  }
+  .app-page.graduation .graduates-section .graduateUser.show .avatar img {
+    width: 100%;
+  }
+  .app-page.graduation .graduates-section .graduateUser.show .user {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
 @keyframes reveal {
   0% {
     left: -100%;
@@ -2544,6 +2752,14 @@ img {
 .app-page.graduation .gallery-section .box .item img {
   width: 100%;
 }
+@media (min-width: 0px) and (max-width: 767px) and (max-height: 390px) {
+  .app-page.graduation .gallery-section .box {
+    margin-left: 38%;
+  }
+}
+.app-page.graduation .sponsors-section {
+  padding-bottom: 200px;
+}
 .app-page.graduation .sponsors-section .agent {
   font-size: 1.5rem;
   width: 100%;
@@ -2556,6 +2772,11 @@ img {
 }
 .app-page.graduation .sponsors-section .agent .name span {
   font-weight: bold;
+}
+@media (min-width: 0px) and (max-width: 767px) and (max-height: 390px) {
+  .app-page.graduation .sponsors-section .agent .name {
+    font-size: 2.4rem;
+  }
 }
 .app-page.graduation .animated-div {
   width: 100px;

@@ -44,7 +44,6 @@ export class Graduation {
         const controlAudio = document.querySelector(".control-audio");
         controlAudio.addEventListener("click", () => {
             const current = this._playPause("#audio-background");
-            console.log('current: ', current);
             const icon = document.querySelector(".control-audio img");
             if (!current) {
                 icon.setAttribute("src", "/invitations/img/volume.svg");
@@ -53,10 +52,6 @@ export class Graduation {
                 icon.setAttribute("src", "/invitations/img/mute.svg");
             }
         });
-        // setTimeout(() => {
-        //     this._playPause("#audio-background");
-        //     console.log('activate sound')
-        // }, 3000);
         const toggleButton = document.getElementById("toggleButton");
         toggleButton.addEventListener("click", () => {
             this._playPause("#myAudio");
@@ -77,12 +72,19 @@ export class Graduation {
     }
     _playPause(audioTag) {
         const audio = document.querySelector(audioTag);
-        console.log('audio.paused: ', audio.paused);
+        const audioBackground = document.querySelector("#audio-background");
         if (audio.paused) {
             audio.play();
+            if (audioTag != '#audio-background') {
+                audioBackground.volume = 0.2;
+            }
+            else {
+                audioBackground.volume = 1;
+            }
         }
         else {
             audio.pause();
+            audioBackground.volume = 1;
         }
         return audio.paused;
     }
