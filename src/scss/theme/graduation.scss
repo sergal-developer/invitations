@@ -188,21 +188,21 @@ section {
         margin: 0 auto;
     }
 
-    .ewknmewf {
-        position: fixed !important;
-        bottom: 0;
-        opacity: 0.5;
-        width: 200% !important;
-    }
-
     .florence-img-scroll {
         top: 0;
         left: 0;
-        position: fixed;
         width: 200%;
         right: 0;
         opacity: 0.5;
-        
+        position: fixed !important;
+        left: 53% !important;
+        width: 400% !important;
+        top: 45% !important;
+    }
+
+    .poem-content {
+        z-index: 1;
+        position: relative;
     }
 }
 
@@ -250,7 +250,7 @@ section {
             }
 
             .full {
-                display: none;
+                display: none;  
             }
 
             .preview {
@@ -303,10 +303,11 @@ section {
             top: 0;
             left: 0;
             background: #777070;
-            background: #d8c9b4;
+            background: #dcddcd;
             display: flex;
             flex-direction: column;
-            // background: #e0decf;
+            padding: 0;
+            animation: reveal 1s ease;
 
             .avatar {
                 width: 100%;
@@ -314,6 +315,7 @@ section {
                 text-align: center;
                 background: rgba(255, 255, 255, 0);
                 height: 50%;
+                animation: reveal 1s ease;
 
                 img {
                     position: relative;
@@ -352,6 +354,22 @@ section {
 
 }
 
+@keyframes reveal {
+    0% { left: -100%; 
+        background: rgb(73, 73, 73);  }
+    100% { left: 0%;
+        background: #dcddcd; }
+}
+
+@keyframes reveal-avatar {
+    0% { top: 100%;
+        opacity: 0; }
+    100% { top: 0%;
+        opacity: 1; }
+}
+
+
+
 .gallery-section {
 
     .box {
@@ -387,7 +405,7 @@ section {
             }
 
             .names {
-                font-size: 1rem;
+                font-size: 0.8rem;
                 text-align: center;
             }
 

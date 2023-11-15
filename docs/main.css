@@ -635,19 +635,20 @@ img {
   right: 0;
   margin: 0 auto;
 }
-.app-page.graduation .poem-section .ewknmewf {
-  position: fixed !important;
-  bottom: 0;
-  opacity: 0.5;
-  width: 200% !important;
-}
 .app-page.graduation .poem-section .florence-img-scroll {
   top: 0;
   left: 0;
-  position: fixed;
   width: 200%;
   right: 0;
   opacity: 0.5;
+  position: fixed !important;
+  left: 53% !important;
+  width: 400% !important;
+  top: 45% !important;
+}
+.app-page.graduation .poem-section .poem-content {
+  z-index: 1;
+  position: relative;
 }
 .app-page.graduation .graduates-section .graduates {
   display: flex;
@@ -730,9 +731,11 @@ img {
   top: 0;
   left: 0;
   background: #777070;
-  background: #d8c9b4;
+  background: #dcddcd;
   display: flex;
   flex-direction: column;
+  padding: 0;
+  animation: reveal 1s ease;
 }
 .app-page.graduation .graduates-section .graduateUser.show .avatar {
   width: 100%;
@@ -740,6 +743,7 @@ img {
   text-align: center;
   background: rgba(255, 255, 255, 0);
   height: 50%;
+  animation: reveal 1s ease;
 }
 .app-page.graduation .graduates-section .graduateUser.show .avatar img {
   position: relative;
@@ -763,6 +767,26 @@ img {
 }
 .app-page.graduation .graduates-section .graduateUser.show .user .preview {
   display: none;
+}
+@keyframes reveal {
+  0% {
+    left: -100%;
+    background: rgb(73, 73, 73);
+  }
+  100% {
+    left: 0%;
+    background: #dcddcd;
+  }
+}
+@keyframes reveal-avatar {
+  0% {
+    top: 100%;
+    opacity: 0;
+  }
+  100% {
+    top: 0%;
+    opacity: 1;
+  }
 }
 .app-page.graduation .gallery-section .box {
   position: relative;
@@ -793,7 +817,7 @@ img {
   font-size: 2.4rem;
 }
 .app-page.graduation .gallery-section .box .item .names {
-  font-size: 1rem;
+  font-size: 0.8rem;
   text-align: center;
 }
 .app-page.graduation .gallery-section .box .item img {
@@ -861,6 +885,7 @@ img {
 p {
   margin-bottom: 30px;
 }
+
 /**
  * @description
  * Generate scroll into container 
@@ -1705,19 +1730,20 @@ section .title-ceremony span {
   right: 0;
   margin: 0 auto;
 }
-.poem-section .ewknmewf {
-  position: fixed !important;
-  bottom: 0;
-  opacity: 0.5;
-  width: 200% !important;
-}
 .poem-section .florence-img-scroll {
   top: 0;
   left: 0;
-  position: fixed;
   width: 200%;
   right: 0;
   opacity: 0.5;
+  position: fixed !important;
+  left: 53% !important;
+  width: 400% !important;
+  top: 45% !important;
+}
+.poem-section .poem-content {
+  z-index: 1;
+  position: relative;
 }
 
 .graduates-section .graduates {
@@ -1801,9 +1827,11 @@ section .title-ceremony span {
   top: 0;
   left: 0;
   background: #777070;
-  background: #d8c9b4;
+  background: #dcddcd;
   display: flex;
   flex-direction: column;
+  padding: 0;
+  animation: reveal 1s ease;
 }
 .graduates-section .graduateUser.show .avatar {
   width: 100%;
@@ -1811,6 +1839,7 @@ section .title-ceremony span {
   text-align: center;
   background: rgba(255, 255, 255, 0);
   height: 50%;
+  animation: reveal 1s ease;
 }
 .graduates-section .graduateUser.show .avatar img {
   position: relative;
@@ -1836,6 +1865,26 @@ section .title-ceremony span {
   display: none;
 }
 
+@keyframes reveal {
+  0% {
+    left: -100%;
+    background: rgb(73, 73, 73);
+  }
+  100% {
+    left: 0%;
+    background: #dcddcd;
+  }
+}
+@keyframes reveal-avatar {
+  0% {
+    top: 100%;
+    opacity: 0;
+  }
+  100% {
+    top: 0%;
+    opacity: 1;
+  }
+}
 .gallery-section .box {
   position: relative;
   width: 150px;
@@ -1865,7 +1914,7 @@ section .title-ceremony span {
   font-size: 2.4rem;
 }
 .gallery-section .box .item .names {
-  font-size: 1rem;
+  font-size: 0.8rem;
   text-align: center;
 }
 .gallery-section .box .item img {
@@ -2307,19 +2356,20 @@ img {
   right: 0;
   margin: 0 auto;
 }
-.app-page.graduation .poem-section .ewknmewf {
-  position: fixed !important;
-  bottom: 0;
-  opacity: 0.5;
-  width: 200% !important;
-}
 .app-page.graduation .poem-section .florence-img-scroll {
   top: 0;
   left: 0;
-  position: fixed;
   width: 200%;
   right: 0;
   opacity: 0.5;
+  position: fixed !important;
+  left: 53% !important;
+  width: 400% !important;
+  top: 45% !important;
+}
+.app-page.graduation .poem-section .poem-content {
+  z-index: 1;
+  position: relative;
 }
 .app-page.graduation .graduates-section .graduates {
   display: flex;
@@ -2402,9 +2452,11 @@ img {
   top: 0;
   left: 0;
   background: #777070;
-  background: #d8c9b4;
+  background: #dcddcd;
   display: flex;
   flex-direction: column;
+  padding: 0;
+  animation: reveal 1s ease;
 }
 .app-page.graduation .graduates-section .graduateUser.show .avatar {
   width: 100%;
@@ -2412,6 +2464,7 @@ img {
   text-align: center;
   background: rgba(255, 255, 255, 0);
   height: 50%;
+  animation: reveal 1s ease;
 }
 .app-page.graduation .graduates-section .graduateUser.show .avatar img {
   position: relative;
@@ -2435,6 +2488,26 @@ img {
 }
 .app-page.graduation .graduates-section .graduateUser.show .user .preview {
   display: none;
+}
+@keyframes reveal {
+  0% {
+    left: -100%;
+    background: rgb(73, 73, 73);
+  }
+  100% {
+    left: 0%;
+    background: #dcddcd;
+  }
+}
+@keyframes reveal-avatar {
+  0% {
+    top: 100%;
+    opacity: 0;
+  }
+  100% {
+    top: 0%;
+    opacity: 1;
+  }
 }
 .app-page.graduation .gallery-section .box {
   position: relative;
@@ -2465,7 +2538,7 @@ img {
   font-size: 2.4rem;
 }
 .app-page.graduation .gallery-section .box .item .names {
-  font-size: 1rem;
+  font-size: 0.8rem;
   text-align: center;
 }
 .app-page.graduation .gallery-section .box .item img {

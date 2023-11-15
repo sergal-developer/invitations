@@ -44,8 +44,9 @@ export class Graduation {
         const controlAudio = document.querySelector(".control-audio");
         controlAudio.addEventListener("click", () => {
             const current = this._playPause("#audio-background");
+            console.log('current: ', current);
             const icon = document.querySelector(".control-audio img");
-            if (current) {
+            if (!current) {
                 icon.setAttribute("src", "/invitations/img/volume.svg");
             }
             else {
@@ -55,7 +56,7 @@ export class Graduation {
         // setTimeout(() => {
         //     this._playPause("#audio-background");
         //     console.log('activate sound')
-        // }, 000);
+        // }, 3000);
         const toggleButton = document.getElementById("toggleButton");
         toggleButton.addEventListener("click", () => {
             this._playPause("#myAudio");
@@ -67,9 +68,8 @@ export class Graduation {
             const scrollPercentage = this._getPercentScroll();
             console.log("scrollPercentage: ", scrollPercentage);
             florenceImage.classList.remove('florence-img-scroll');
-            if (scrollPercentage > 37 && scrollPercentage < 45) {
+            if (scrollPercentage > 30 && scrollPercentage < 47) {
                 florenceImage.classList.add('florence-img-scroll');
-                florenceImage.setAttribute('stryle', ``);
             }
             // Aplica la rotación en el eje Y basada en el porcentaje de desplazamiento
             // animatedDiv.style.transform = `translate(-50%, -50%) rotateX(${scrollPercentage * 10}deg)`;
@@ -77,12 +77,11 @@ export class Graduation {
     }
     _playPause(audioTag) {
         const audio = document.querySelector(audioTag);
+        console.log('audio.paused: ', audio.paused);
         if (audio.paused) {
-            // Si está pausado, reprodúcelo
             audio.play();
         }
         else {
-            // Si se está reproduciendo, paúsalo
             audio.pause();
         }
         return audio.paused;

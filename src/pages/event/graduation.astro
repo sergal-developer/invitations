@@ -64,12 +64,14 @@ const data = [
     familyName: "Rocha Castillo",
     photo: 'MariaDoloresRochaCastillo.jpg',
     preview: 'MariaDoloresRochaCastillo.jpg-removebg-preview.png',
+    grade: "Enfermera Auxiliar",
   },
   {
     name: "Angelica Joseph",
     familyName: "Morales Rosas",
     photo: 'AngelicaJosephMoralesRosas.jpg',
     preview: 'AngelicaJosephMoralesRosas-removebg-preview.png',
+    grade: "Enfermera Auxiliar",
   },
   {
     name: "Mayte Guadalupe",
@@ -157,7 +159,7 @@ const data = [
   </div>
 
   <div class="control-audio body-hidden" >
-    <img src="/invitations/img/volume.svg" alt="" />
+    <img src="/invitations/img/mute.svg" alt="" />
     <audio id="audio-background" src="/invitations/data/marcha-bg.mp3" loop></audio>
   </div>
 
@@ -241,6 +243,9 @@ const data = [
             </div>
           </div>
 
+          <div class="poem-content">
+            
+
           <br />
           <br />
           <p>
@@ -270,6 +275,8 @@ const data = [
             dispuesta a que se me demande.
           </p>
           <p>¡LO JURO!</p>
+          
+        </div>
         </div>
       </section>
 
@@ -339,6 +346,7 @@ const data = [
               return (
                 <div style={"--i:" + counter + ";"} class="item">
                   <img src={graduate["_photo"]} alt={graduate.photo} />
+                  <div class="names">{graduate.name} {graduate.familyName}</div>
                 </div>
               );
             })
