@@ -483,6 +483,37 @@ img {
 .app-page.graduation :root {
   --numGraduates: 2;
 }
+.app-page.graduation #preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.app-page.graduation #loader {
+  border: 8px solid #3498db;
+  border-top: 8px solid #ffffff;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.app-page.graduation .body-hidden {
+  display: none !important;
+}
 .app-page.graduation .body-content {
   display: flex;
   align-items: center;
@@ -497,6 +528,7 @@ img {
   padding: 40px;
   background: url("/invitations/img/pattern.svg") repeat 10% 10% fixed;
   background-size: 10%;
+  position: relative;
 }
 .app-page.graduation section .poem {
   text-align: center;
@@ -590,6 +622,32 @@ img {
 .app-page.graduation .countdown-section li span {
   display: block;
   font-size: 2.5rem;
+}
+.app-page.graduation .poem-section .title {
+  margin-bottom: 260px;
+}
+.app-page.graduation .poem-section #florence-img {
+  transition: all 300ms;
+  position: absolute;
+  left: 0;
+  top: 164px;
+  width: 60%;
+  right: 0;
+  margin: 0 auto;
+}
+.app-page.graduation .poem-section .ewknmewf {
+  position: fixed !important;
+  bottom: 0;
+  opacity: 0.5;
+  width: 200% !important;
+}
+.app-page.graduation .poem-section .florence-img-scroll {
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 200%;
+  right: 0;
+  opacity: 0.5;
 }
 .app-page.graduation .graduates-section .graduates {
   display: flex;
@@ -1488,6 +1546,40 @@ p {
   --numGraduates: 2;
 }
 
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+#loader {
+  border: 8px solid #3498db;
+  border-top: 8px solid #ffffff;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.body-hidden {
+  display: none !important;
+}
+
 .body-content {
   display: flex;
   align-items: center;
@@ -1503,6 +1595,7 @@ section {
   padding: 40px;
   background: url("/invitations/img/pattern.svg") repeat 10% 10% fixed;
   background-size: 10%;
+  position: relative;
 }
 section .poem {
   text-align: center;
@@ -1598,6 +1691,33 @@ section .title-ceremony span {
 .countdown-section li span {
   display: block;
   font-size: 2.5rem;
+}
+
+.poem-section .title {
+  margin-bottom: 260px;
+}
+.poem-section #florence-img {
+  transition: all 300ms;
+  position: absolute;
+  left: 0;
+  top: 164px;
+  width: 60%;
+  right: 0;
+  margin: 0 auto;
+}
+.poem-section .ewknmewf {
+  position: fixed !important;
+  bottom: 0;
+  opacity: 0.5;
+  width: 200% !important;
+}
+.poem-section .florence-img-scroll {
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 200%;
+  right: 0;
+  opacity: 0.5;
 }
 
 .graduates-section .graduates {
@@ -2035,6 +2155,37 @@ img {
 .app-page.graduation :root {
   --numGraduates: 2;
 }
+.app-page.graduation #preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.app-page.graduation #loader {
+  border: 8px solid #3498db;
+  border-top: 8px solid #ffffff;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.app-page.graduation .body-hidden {
+  display: none !important;
+}
 .app-page.graduation .body-content {
   display: flex;
   align-items: center;
@@ -2049,6 +2200,7 @@ img {
   padding: 40px;
   background: url("/invitations/img/pattern.svg") repeat 10% 10% fixed;
   background-size: 10%;
+  position: relative;
 }
 .app-page.graduation section .poem {
   text-align: center;
@@ -2142,6 +2294,32 @@ img {
 .app-page.graduation .countdown-section li span {
   display: block;
   font-size: 2.5rem;
+}
+.app-page.graduation .poem-section .title {
+  margin-bottom: 260px;
+}
+.app-page.graduation .poem-section #florence-img {
+  transition: all 300ms;
+  position: absolute;
+  left: 0;
+  top: 164px;
+  width: 60%;
+  right: 0;
+  margin: 0 auto;
+}
+.app-page.graduation .poem-section .ewknmewf {
+  position: fixed !important;
+  bottom: 0;
+  opacity: 0.5;
+  width: 200% !important;
+}
+.app-page.graduation .poem-section .florence-img-scroll {
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 200%;
+  right: 0;
+  opacity: 0.5;
 }
 .app-page.graduation .graduates-section .graduates {
   display: flex;

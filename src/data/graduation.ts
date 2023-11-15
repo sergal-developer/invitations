@@ -83,11 +83,15 @@ export class Graduation {
             const scrollPercentage = this._getPercentScroll();
             console.log("scrollPercentage: ", scrollPercentage);
 
-            if(scrollPercentage > 29 && scrollPercentage < 45) {
+            
+            florenceImage.classList.remove('florence-img-scroll');
+
+            if(scrollPercentage > 37 && scrollPercentage < 45) {
               florenceImage.classList.add('florence-img-scroll');
               florenceImage.setAttribute('stryle', ``);
 
             }
+
         
             // Aplica la rotación en el eje Y basada en el porcentaje de desplazamiento
             // animatedDiv.style.transform = `translate(-50%, -50%) rotateX(${scrollPercentage * 10}deg)`;

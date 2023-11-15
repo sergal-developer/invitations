@@ -62,14 +62,14 @@ const data = [
   {
     name: "Maria Dolores",
     familyName: "Rocha Castillo",
-    photo: null,
-    preview: null,
+    photo: 'MariaDoloresRochaCastillo.jpg',
+    preview: 'MariaDoloresRochaCastillo.jpg-removebg-preview.png',
   },
   {
     name: "Angelica Joseph",
     familyName: "Morales Rosas",
-    photo: null,
-    preview: null,
+    photo: 'AngelicaJosephMoralesRosas.jpg',
+    preview: 'AngelicaJosephMoralesRosas-removebg-preview.png',
   },
   {
     name: "Mayte Guadalupe",
@@ -152,13 +152,16 @@ const data = [
 ---
 
 <Main title="Invitations">
-  <!-- <div class="control-audio"></div> -->
-  <div class="control-audio">
-    <img src="/invitations/img/volume.svg" alt="" />
-    <audio id="audio-background" src="/invitations/data/marcha-bg.mp3" autoplay loop></audio>
+  <div id="preloader">
+    <div id="loader"></div>
   </div>
 
-  <div class="app-page graduation">
+  <div class="control-audio body-hidden" >
+    <img src="/invitations/img/volume.svg" alt="" />
+    <audio id="audio-background" src="/invitations/data/marcha-bg.mp3" loop></audio>
+  </div>
+
+  <div class="app-page graduation body-hidden">
     <div class="body-content">
       <section class="invitation-section">
         <div class="school wow animate__animated bounceInUp">
@@ -375,5 +378,24 @@ const data = [
 <script> 
   import { Graduation } from "../../data/graduation";
   const app = new Graduation();
-  app.init();
+
+  document.addEventListener("DOMContentLoaded", () => {
+  const preloader = document.getElementById("preloader");
+  const hiddens = document.querySelectorAll(".body-hidden");
+
+  window.addEventListener("load", () => {
+    // Oculta el preloader una vez que todo el contenido se haya cargado
+    // preloader.style.display = "none";
+    preloader.classList.add('body-hidden');
+    hiddens.forEach(item => {
+      item.classList.remove('body-hidden');
+    });
+
+    console.log('hiddens: ', hiddens);
+
+    
+    app.init();
+  });
+});
+
 </script>
