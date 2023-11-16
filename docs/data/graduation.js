@@ -3,14 +3,29 @@ export class Graduation {
     constructor() { }
     init() {
         const wow = new Wow();
-        console.log('wow: ', wow);
         wow.init();
-        console.log("init");
         this.setupGallery();
         this.setupActionsGallery();
         this.setupAudioControls();
         this.setupScrollActions();
         this._coundown();
+        this.setupStatsActions();
+    }
+    setupStatsActions() {
+        const stats = document.querySelector("#stats");
+        stats.addEventListener("click", () => {
+            const pantalla = window.screen;
+            // Creamos un objeto para almacenar las estadísticas
+            const estadisticas = {
+                ancho: pantalla.width,
+                alto: pantalla.height,
+                anchoDisponible: pantalla.availWidth,
+                altoDisponible: pantalla.availHeight,
+                colorProfundidad: pantalla.colorDepth,
+                pixelProfundidad: pantalla.pixelDepth
+            };
+            alert(JSON.stringify(estadisticas));
+        });
     }
     setupGallery() {
         const box = document.querySelector(".box");
@@ -61,7 +76,6 @@ export class Graduation {
         const florenceImage = document.querySelector('#florence-img');
         window.addEventListener("scroll", () => {
             const scrollPercentage = this._getPercentScroll();
-            console.log("scrollPercentage: ", scrollPercentage);
             florenceImage.classList.remove('florence-img-scroll');
             if (scrollPercentage > 30 && scrollPercentage < 47) {
                 florenceImage.classList.add('florence-img-scroll');
@@ -106,7 +120,6 @@ export class Graduation {
             document.getElementById("seconds").innerText = String(Math.floor((distance % minute) / second));
             //do something later when date is reached
             if (distance < 0) {
-                console.log("distance: ", distance);
                 // document.getElementById("headline").innerText = "It's my birthday!";
                 // document.getElementById("countdown").style.display = "none";
                 // document.getElementById("content").style.display = "block";

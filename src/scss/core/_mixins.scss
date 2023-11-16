@@ -3,7 +3,9 @@
 // #region Responsive section
 $mobile-width: 0px;
 $mobile-height: 500px;
+$mobile-width-landscape: 900px;
 $tablet-width: 768px;
+
 $desktop-width: 1204px;
 
 @mixin mobile {
@@ -13,7 +15,7 @@ $desktop-width: 1204px;
 }
 
 @mixin mobile-landscape {
-    @media (min-width: #{$mobile-width}) and (max-width: #{$tablet-width - 1px}) and (max-height: #{$mobile-height}) {
+    @media (min-width: #{$mobile-width}) and (max-width: #{$mobile-width-landscape - 1px}) and (max-height: #{$mobile-height}) {
       @content;
     }
 }

@@ -5,16 +5,34 @@ export class Graduation {
   constructor() { }
   init() {
     const wow = new Wow();
-    console.log('wow: ', wow);
     wow.init();
 
-    console.log("init");
 
     this.setupGallery();
     this.setupActionsGallery();
     this.setupAudioControls();
     this.setupScrollActions();
     this._coundown();
+    this.setupStatsActions();
+  }
+
+  setupStatsActions() {
+    const stats: any = document.querySelector("#stats");
+    stats.addEventListener("click", () => {
+      const pantalla = window.screen;
+
+      // Creamos un objeto para almacenar las estadísticas
+      const estadisticas = {
+          ancho: pantalla.width,
+          alto: pantalla.height,
+          anchoDisponible: pantalla.availWidth,
+          altoDisponible: pantalla.availHeight,
+          colorProfundidad: pantalla.colorDepth,
+          pixelProfundidad: pantalla.pixelDepth
+      };
+      
+      alert(JSON.stringify(estadisticas));
+    });
   }
 
   setupGallery() {
@@ -76,7 +94,6 @@ export class Graduation {
     const florenceImage = document.querySelector('#florence-img');
     window.addEventListener("scroll", () => {
       const scrollPercentage = this._getPercentScroll();
-      console.log("scrollPercentage: ", scrollPercentage);
 
 
       florenceImage.classList.remove('florence-img-scroll');
@@ -151,7 +168,6 @@ export class Graduation {
 
         //do something later when date is reached
         if (distance < 0) {
-          console.log("distance: ", distance);
           // document.getElementById("headline").innerText = "It's my birthday!";
           // document.getElementById("countdown").style.display = "none";
           // document.getElementById("content").style.display = "block";
