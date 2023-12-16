@@ -106,10 +106,14 @@ export class Graduation {
         const second = 1000, minute = second * 60, hour = minute * 60, day = hour * 24;
         //I'm adding this section so I don't have to keep updating this pen every year :-)
         //remove this if you don't need it
-        let today = new Date(), dd = String(today.getDate()).padStart(2, "0"), mm = String(today.getMonth() + 1).padStart(2, "0"), yyyy = today.getFullYear(), nextYear = yyyy, dayMonth = "12/16/", goal = "12/16/2023";
+        let today = new Date(), dd = String(today.getDate()).padStart(2, "0"), mm = String(today.getMonth() + 1).padStart(2, "0"), yyyy = today.getFullYear(), nextYear = yyyy, dayMonth = "12/16/", goal = "12/16/2023 10:30";
         today = mm + "/" + dd + "/" + yyyy;
-        if (today > goal) {
-            goal = dayMonth + nextYear;
+        const _goal = new Date(goal).getTime();
+        const _today = new Date(today).getTime();
+        if (_today > _goal) {
+            // goal = dayMonth + nextYear;
+            const countdown = document.querySelector('#countdown');
+            countdown.setAttribute('style', 'display:none;');
         }
         //end
         const countDown = new Date(goal).getTime(), x = setInterval(() => {

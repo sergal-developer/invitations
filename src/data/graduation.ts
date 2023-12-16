@@ -140,11 +140,17 @@ export class Graduation {
       yyyy = today.getFullYear(),
       nextYear = yyyy,
       dayMonth = "12/16/",
-      goal = "12/16/2023";
+      goal = "12/16/2023 10:30";
 
     today = mm + "/" + dd + "/" + yyyy;
-    if (today > goal) {
-      goal = dayMonth + nextYear;
+
+    const _goal = new Date(goal).getTime();
+    const _today = new Date(today).getTime();
+    if (_today > _goal) {
+      
+      // goal = dayMonth + nextYear;
+      const countdown = document.querySelector('#countdown');
+      countdown.setAttribute('style', 'display:none;');
     }
     //end
 
